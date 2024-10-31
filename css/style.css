@@ -1,0 +1,262 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2e2d2d;
+}
+/* _______________________NAV____________________ */
+.side-nav {
+    position: fixed;
+    height: 100%;
+    width: 50px; /* ancho inicial pequeño */
+    border: 2px solid #fafafa10;
+    border-radius:  0 20px 20px 0;
+    overflow-x: hidden;
+    transition: width 0.3s;
+}
+
+.glass-effect{
+    background: #fafafa10;
+    backdrop-filter: blur(1.0rem);
+    -webkit-backdrop-filter: blur(1.0rem);
+}
+
+.glass-effectt{
+  border: 1px solid #fafafa20;
+  border-radius: 10px;
+  background: #fafafa10;
+  backdrop-filter: blur(1.0rem);
+  -webkit-backdrop-filter: blur(1.0rem);
+  -webkit-box-shadow: 0px 0px 100px -10px rgba(0,168,204,0.7);
+  -moz-box-shadow: 0px 0px 100px -10px rgba(0,168,204,0.7);
+  box-shadow: 0px 0px 100px -10px rgba(0,168,204,0.7);
+}
+
+.side-nav .toggle-btn {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.side-nav .nav-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.side-nav.expanded {
+    width: 250px; /* ancho cuando está expandida */
+    -webkit-box-shadow: 21px 6px 49px -24px rgba(0,168,204,1);
+    -moz-box-shadow: 21px 6px 49px -24px rgba(0,168,204,1);
+    box-shadow: 21px 6px 49px -24px rgba(0,168,204,1);
+}
+
+.side-nav.expanded .nav-content {
+    display: flex;
+}
+
+.side-nav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    background-color: #575757;
+}
+
+.main-content {
+    margin-left: 60px; /* margen inicial pequeño */
+    padding: 20px;
+    transition: margin-left 0.3s; /* animación para el contenido principal */
+}
+
+.side-nav.expanded ~ .main-content {
+    margin-left: 260px; /* margen cuando la nav está expandida */
+}
+/* _______________________NAV____________________ */
+
+/* _________________NAV INDEX____________________ */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #00A8CC;
+  border-top: 0px ;
+  border-radius: 0px 0px 20px 20px;
+  align-items: center;
+  padding: 5px 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo img {
+  height: 80px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+  border: 2px solid #00A8CC;
+}
+
+.nav-links a:hover {
+  background-color: #00A8CC;
+  border-radius: 5px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+  }
+  
+  .nav-links li {
+      margin: 10px 0;
+  }
+  
+  .menu-toggle {
+      display: flex;
+  }
+  
+  .nav-links.active {
+      display: flex;
+  }
+}
+
+/* _________________NAV INDEX____________________ */
+
+
+/* _____________________INFO_____________________ */
+.index{
+    display: flex;
+    align-items: center;
+    padding: 200PX 0 150PX 0;
+    margin-left: 60px;
+    height: 800px;
+  }
+  .indexinfo{
+    width: 60%;
+    padding-right: 25px;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  .indexinfo h1{
+    font-size: 55px;
+    line-height: 70px;
+    font-weight: 800;
+    color: #00A8CC;
+    margin-bottom: 25px;
+  }
+  .indexinfo p{
+    font-size: 18px;
+    color: #ffffff;
+  }
+  .carrusel{
+    width: 40%;
+    box-sizing: border-box;
+    padding: 30px;
+    align-items: center;
+  }
+  
+  .imgin{
+    width: 500px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .barran{
+    border: 2px solid #00A8CC;
+    border-radius: 10px;
+    background: transparent;
+    width: 400px;
+    color: #FFFFFF;
+  }
+  
+  .barran::placeholder{
+    color: #FFFFFF;
+    background: transparent;
+  }
+  .barran::role{
+    color: #FFFFFF;
+    background: transparent;
+  }
+/* _____________________INFO_____________________ */
+/* ____________________FOOTER____________________ */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #00A8CC;
+  border-bottom: 0px;
+  border-radius: 20px 20px 0px 0px;
+  color: #fff;
+  padding: 18px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-info {
+  max-width: 50%;
+}
+
+.footer-social a {
+  color: #fff;
+  margin-left: 20px;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #00A8CC;
+}
+
+/* ____________________FOOTER____________________ */
+.homee{
+  height: auto;
+  width: auto;
+  margin-left: 50px; /* Esto hace que el elemento flote a la derecha */
+}
