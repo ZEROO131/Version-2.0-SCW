@@ -1,4 +1,12 @@
-<?php require_once 'models/seg.php';?>
+<?php 
+require_once 'models/seg.php';
+require_once 'models/conexion.php';
+
+// Solo inicia la sesión si aún no está iniciada
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +22,10 @@
 </head>
 <body>
 <?php
-    include ("models/conexion.php");
-    $pg= isset($_REQUEST["pg"]) ? $_REQUEST["pg"]:NULL;
-	if(!$pg AND $_SESSION['pagini']) $pg=$_SESSION['pagini'];
+    $pg = isset($_REQUEST["pg"]) ? $_REQUEST["pg"] : NULL;
+    if(!$pg && isset($_SESSION['pagini'])) {
+        $pg = $_SESSION['pagini'];
+    }
 ?>
     <nav>
         <?php include ("views/menu.php"); ?>
@@ -24,11 +33,19 @@
 
 	<section class="conte">
 		<?php
-		$rut = validar($pg);
-		if($rut){
-				include ($rut[0]['rutpag']);
-		}else{
-				echo"<br><br><br><br><br><br><br><h3> No tiene Permisos para ingresar a este sitio.</h3><br><br><br><br><br><br><br>";			
+		if (function_exists('validar')) {
+			$rut = validar($pg);
+            if ($rut) {
+                include($rut[0]['rutpag']);
+            } else {
+                echo "<br><br><br><br><br><br><br>
+                      <h3>No tiene permisos para ingresar a este sitio.</h3>
+                      <p>Parámetro pg: $pg</p>
+                      <p>ID de perfil: " . $_SESSION['idper'] . "</p>
+                      <br><br><br><br><br><br><br>";
+            }
+		} else {
+			echo "<br><br><br><br><br><br><br><h3>La función validar() no está definida.</h3><br><br><br><br><br><br><br>";
 		}
 		?>
 	</section>
