@@ -27,6 +27,7 @@
         if(!$pg=="2001")
             require_once("views/vempinf.php");
     ?> 
+    <h1>holaaaaa</h1>
     </section>
 
     <script src="js/bootstrap.min.js"></script>
