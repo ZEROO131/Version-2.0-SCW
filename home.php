@@ -1,3 +1,4 @@
+<?php require_once 'models/seg.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,21 +15,23 @@
 <body>
 <?php
     include ("models/conexion.php");
-	$pg = isset($_GET["pg"]) ? $_GET["pg"]:NULL;
+    $pg= isset($_REQUEST["pg"]) ? $_REQUEST["pg"]:NULL;
+	if(!$pg AND $_SESSION['pagini']) $pg=$_SESSION['pagini'];
 ?>
     <nav>
         <?php include ("views/menu.php"); ?>
     </nav>
 
-    <section class="homee">
-    <?php
-        if(!$pg)
-            require_once("home.php");
-        if(!$pg=="2001")
-            require_once("views/vempinf.php");
-    ?> 
-    <h1>holaaaaa</h1>
-    </section>
+	<section class="conte">
+		<?php
+		$rut = validar($pg);
+		if($rut){
+				include ($rut[0]['rutpag']);
+		}else{
+				echo"<br><br><br><br><br><br><br><h3> No tiene Permisos para ingresar a este sitio.</h3><br><br><br><br><br><br><br>";			
+		}
+		?>
+	</section>
 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
