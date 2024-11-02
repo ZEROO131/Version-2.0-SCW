@@ -258,5 +258,50 @@ body {
 .homee{
   height: auto;
   width: auto;
-  margin-left: 50px; /* Esto hace que el elemento flote a la derecha */
+  margin-left: 100px; /* Esto hace que el elemento flote a la derecha */
+}
+
+
+/* _____________________________________________ */
+/* _________________CSS ACTORES_________________ */
+/* _____________________________________________ */
+
+
+
+
+/* _________________USUARIO_____________________ */
+.allsec {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: 100vh; /* Ajusta la altura para que se centre verticalmente en la página */
+  border-radius: 20px 0px 0px 20px;
+}
+.sec1 {
+  border: 2px solid #00A8CC;
+  width: 50%;
+  text-align: center;
+  display: flex; /* Agregado */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Permite que el contenido se apile verticalmente */
+}
+.sec2{
+  border: 2px solid  #00A8CC;
+  width: 50%;  
+}
+.carusu {
+  width: 300px; /* Tamaño del círculo */
+  height: 300px;
+  border: 2px solid #00A8CC;
+  border-radius: 50%; /* Forma circular */
+  overflow: hidden; /* Recorta contenido adicional */
+  box-shadow: 0 4px 15px #00A8CC; /* Sombra alrededor */
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.carusu img {
+  width: 100%; /* Asegura que la imagen ocupe todo el círculo */
+  height: 100%; /* Asegura el ajuste al contenedor */
+  object-fit: cover; /* Recorta la imagen para adaptarse */
 }
