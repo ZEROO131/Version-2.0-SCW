@@ -1,6 +1,12 @@
 /* POPPINS FONT */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+html, body {
+  min-height: 100vh; /* Altura mínima del 100% de la ventana */
+  overflow-y: auto;
+}
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -8,7 +14,7 @@ body {
 }
 /* _______________________NAV____________________ */
 .side-nav {
-    position: fixed;
+  position: absolute;
     height: 100%;
     width: 50px; /* ancho inicial pequeño */
     border: 2px solid #fafafa10;
@@ -76,11 +82,6 @@ body {
     background-color: #575757;
 }
 
-.main-content {
-    margin-left: 60px; /* margen inicial pequeño */
-    padding: 20px;
-    transition: margin-left 0.3s; /* animación para el contenido principal */
-}
 
 .side-nav.expanded ~ .main-content {
     margin-left: 260px; /* margen cuando la nav está expandida */
@@ -173,7 +174,7 @@ body {
 .index{
     display: flex;
     align-items: center;
-    padding: 200PX 0 150PX 0;
+    padding: 200px 0 150px 0;
     margin-left: 60px;
     height: 800px;
   }
@@ -213,6 +214,7 @@ body {
     background: transparent;
     width: 400px;
     color: #FFFFFF;
+    margin-left: -50px;
   }
   
   .barran::placeholder{
@@ -266,7 +268,22 @@ body {
 /* _________________CSS ACTORES_________________ */
 /* _____________________________________________ */
 
-
+.headerr{
+  position: fixed;
+  top: 10px; /* Ajusta el valor según lo necesites */
+  right: 0px; /* Alineación a la derecha */
+  background-color: #fff;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px 0px 0px 10px;
+  color: #2e2d2d;
+}
+.headerr p{
+  font-size: 14px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: 800;
+}
 
 
 /* _________________USUARIO_____________________ */
@@ -278,25 +295,33 @@ body {
   border-radius: 20px 0px 0px 20px;
 }
 .sec1 {
-  border: 2px solid #00A8CC;
+  border: 2px solid #fff;
+  border-radius: 25px;
   width: 50%;
   text-align: center;
   display: flex; /* Agregado */
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   flex-direction: column; /* Permite que el contenido se apile verticalmente */
+  height: auto; 
+}
+.sec1 p, h3{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
 }
 .sec2{
-  border: 2px solid  #00A8CC;
+  border: 2px solid  #fff;
   width: 50%;  
+  height: auto;
 }
 .carusu {
   width: 300px; /* Tamaño del círculo */
-  height: 300px;
-  border: 2px solid #00A8CC;
-  border-radius: 50%; /* Forma circular */
+  height: 300px; 
+  border: 2px solid #fff;
+  border-radius: 25px; /* Forma circular */
   overflow: hidden; /* Recorta contenido adicional */
-  box-shadow: 0 4px 15px #00A8CC; /* Sombra alrededor */
+  box-shadow: 0 5px 20px #fff; /* Sombra alrededor */
   margin-top: 10%;
   margin-bottom: 5%;
 }
@@ -305,7 +330,14 @@ body {
   height: 100%; /* Asegura el ajuste al contenedor */
   object-fit: cover; /* Recorta la imagen para adaptarse */
 }
-
+.glasusu {
+  top: 0;
+  left: 0;
+  background: #fafafa10;
+  backdrop-filter: blur(1.0rem);
+  -webkit-backdrop-filter: blur(1.0rem);
+  z-index: -1; /* Coloca la capa detrás de otros elementos */
+}
 
 
 
