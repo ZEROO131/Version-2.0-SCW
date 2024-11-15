@@ -7,7 +7,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,8 +25,12 @@ if (session_status() === PHP_SESSION_NONE) {
         $pg = $_SESSION['pagini'];
     }
 ?>
+    <div class="headerr">
+		<?php include ("views/header.php"); ?>
+	</div>
     <nav>
         <?php include ("views/menu.php"); ?>
+        
     </nav>
 
     <section class="homee">

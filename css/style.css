@@ -1,6 +1,14 @@
 /* POPPINS FONT */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+body, html {
+  min-height: 100vh; /* Altura mínima del 100% de la ventana */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -8,7 +16,7 @@ body {
 }
 /* _______________________NAV____________________ */
 .side-nav {
-    position: fixed;
+  position: absolute;
     height: 100%;
     width: 50px; /* ancho inicial pequeño */
     border: 2px solid #fafafa10;
@@ -76,11 +84,6 @@ body {
     background-color: #575757;
 }
 
-.main-content {
-    margin-left: 60px; /* margen inicial pequeño */
-    padding: 20px;
-    transition: margin-left 0.3s; /* animación para el contenido principal */
-}
 
 .side-nav.expanded ~ .main-content {
     margin-left: 260px; /* margen cuando la nav está expandida */
@@ -154,8 +157,9 @@ body {
   }
   
   .nav-links li {
-      margin: 10px 0;
+      margin: 20px 0;
   }
+  
   
   .menu-toggle {
       display: flex;
@@ -170,59 +174,111 @@ body {
 
 
 /* _____________________INFO_____________________ */
-.index{
-    display: flex;
-    align-items: center;
-    padding: 200PX 0 150PX 0;
-    margin-left: 60px;
-    height: 800px;
+/* Estructura general para escritorio */
+.indes {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 200px 0px 300px 0px;
+  margin-left: 50px;
+  height: 800px;
+}
+
+.indexinfo {
+  width: 60%;
+  padding-right: 25px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.indexinfo h1 {
+  font-size: 55px;
+  line-height: 70px;
+  font-weight: 800;
+  color: #00A8CC;
+  margin-bottom: 25px;
+}
+
+.indexinfo p {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.carrusel {
+  width: 40%;
+  box-sizing: border-box;
+  padding: 30px;
+  align-items: center;
+}
+
+.imgin {
+  width: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+.barran {
+  border: 2px solid #00A8CC;
+  border-radius: 10px;
+  background: transparent;
+  width: 400px;
+  color: #FFFFFF;
+  margin-left: -50px;
+}
+
+.barran::placeholder {
+  color: #FFFFFF;
+  background: transparent;
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+  /* Cambia la dirección a columna y elimina márgenes adicionales */
+  .indes {
+      flex-direction: column;
+      padding: 100px 15px; /* Reduce el padding */
+      margin: 0;
+      height: auto; /* Permite que el contenido ajuste su altura */
   }
-  .indexinfo{
-    width: 60%;
-    padding-right: 25px;
-    box-sizing: border-box;
-    padding: 20px;
+
+  .indexinfo, .carrusel {
+      width: 100%;
+      padding: 0;
+      margin: 10px 0; /* Espacio entre secciones */
   }
-  .indexinfo h1{
-    font-size: 55px;
-    line-height: 70px;
-    font-weight: 800;
-    color: #00A8CC;
-    margin-bottom: 25px;
+
+  .indexinfo h1 {
+      font-size: 35px;
+      line-height: 45px;
+      text-align: center; /* Centra el texto */
   }
-  .indexinfo p{
-    font-size: 18px;
-    color: #ffffff;
+
+  .indexinfo p {
+      font-size: 16px;
+      text-align: center; /* Centra el párrafo */
   }
-  .carrusel{
-    width: 40%;
-    box-sizing: border-box;
-    padding: 30px;
-    align-items: center;
+
+  .carrusel {
+      padding: 0;
+      margin-top: 20px;
   }
-  
-  .imgin{
-    width: 500px;
-    margin: 0 auto;
-    display: block;
+
+  /* Ajusta la barra de búsqueda para ocupar menos ancho */
+  .barran {
+      width: 250px;
+      margin: 0 auto;
   }
-  
-  .barran{
-    border: 2px solid #00A8CC;
-    border-radius: 10px;
-    background: transparent;
-    width: 400px;
-    color: #FFFFFF;
+  .imgin {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
   }
-  
-  .barran::placeholder{
-    color: #FFFFFF;
-    background: transparent;
-  }
-  .barran::role{
-    color: #FFFFFF;
-    background: transparent;
-  }
+}
+
+
+
 /* _____________________INFO_____________________ */
 /* ____________________FOOTER____________________ */
 .footer {
@@ -266,7 +322,22 @@ body {
 /* _________________CSS ACTORES_________________ */
 /* _____________________________________________ */
 
-
+.headerr{
+  position: fixed;
+  top: 10px; /* Ajusta el valor según lo necesites */
+  right: 0px; /* Alineación a la derecha */
+  background-color: #fff;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px 0px 0px 10px;
+  color: #2e2d2d;
+}
+.headerr p{
+  font-size: 14px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: 800;
+}
 
 
 /* _________________USUARIO_____________________ */
@@ -278,25 +349,33 @@ body {
   border-radius: 20px 0px 0px 20px;
 }
 .sec1 {
-  border: 2px solid #00A8CC;
+  border: 2px solid #fff;
+  border-radius: 25px;
   width: 50%;
   text-align: center;
   display: flex; /* Agregado */
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   flex-direction: column; /* Permite que el contenido se apile verticalmente */
+  height: auto; 
+}
+.sec1 p, h3{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
 }
 .sec2{
-  border: 2px solid  #00A8CC;
+  border: 2px solid  #fff;
   width: 50%;  
+  height: auto;
 }
 .carusu {
   width: 300px; /* Tamaño del círculo */
-  height: 300px;
-  border: 2px solid #00A8CC;
-  border-radius: 50%; /* Forma circular */
+  height: 300px; 
+  border: 2px solid #fff;
+  border-radius: 25px; /* Forma circular */
   overflow: hidden; /* Recorta contenido adicional */
-  box-shadow: 0 4px 15px #00A8CC; /* Sombra alrededor */
+  box-shadow: 0 5px 20px #fff; /* Sombra alrededor */
   margin-top: 10%;
   margin-bottom: 5%;
 }
@@ -305,7 +384,63 @@ body {
   height: 100%; /* Asegura el ajuste al contenedor */
   object-fit: cover; /* Recorta la imagen para adaptarse */
 }
+.glasusu {
+  top: 0;
+  left: 0;
+  background: #fafafa10;
+  backdrop-filter: blur(1.0rem);
+  -webkit-backdrop-filter: blur(1.0rem);
+  z-index: -1; /* Coloca la capa detrás de otros elementos */
+}
 
+
+/* progres bar */
+/* Contenedor principal */
+    .progress-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 200px;
+      margin: 20px auto;
+    }
+
+    /* Línea vertical */
+    .progress-line {
+      position: relative;
+      width: 4px;
+      background-color: #ddd;
+      height: 200px;
+    }
+
+    /* Estilo de los puntos de cada paso */
+    .step {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      background-color: #ddd;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    /* Icono de verificación */
+    .step.completed {
+      background-color: #ff3d3d; /* Color rojo para los pasos completados */
+    }
+
+    /* Texto debajo de cada paso */
+    .step-text {
+      text-align: center;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    /* Colocación de cada paso */
+    .step1 { top: 0; }
+    .step2 { top: 33%; }
+    .step3 { top: 66%; }
+    .step4 { top: 100%; }
 
 
 
