@@ -8,6 +8,8 @@ private $marca;
 private $modelvehi;
 private $tipvehi;
 
+
+
 // GET
 public function getIdvehi(){ 
     return $this->idvehi;}

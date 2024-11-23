@@ -314,7 +314,7 @@ body {
 .homee{
   height: auto;
   width: auto;
-  margin-left: 100px; /* Esto hace que el elemento flote a la derecha */
+  margin-left: 15%; /* Esto hace que el elemento flote a la derecha */
 }
 
 
@@ -341,48 +341,50 @@ body {
 
 
 /* _________________USUARIO_____________________ */
+/* Estilos para pantallas grandes (vista actual) */
 .allsec {
   display: flex;
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  height: 100vh; /* Ajusta la altura para que se centre verticalmente en la página */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   border-radius: 20px 0px 0px 20px;
+  margin-right: 15%; /* Conserva el margen derecho */
 }
 .sec1 {
   border: 2px solid #fff;
   border-radius: 25px;
   width: 50%;
   text-align: center;
-  display: flex; /* Agregado */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  flex-direction: column; /* Permite que el contenido se apile verticalmente */
-  height: auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
 }
-.sec1 p, h3{
+.sec1 p, h3 {
   color: #fff;
   font-size: 24px;
   font-weight: 600;
 }
-.sec2{
-  border: 2px solid  #fff;
-  width: 50%;  
+.sec2 {
+  border: 2px solid #fff;
+  width: 50%;
   height: auto;
 }
 .carusu {
-  width: 300px; /* Tamaño del círculo */
-  height: 300px; 
+  width: 300px;
+  height: 300px;
   border: 2px solid #fff;
-  border-radius: 25px; /* Forma circular */
-  overflow: hidden; /* Recorta contenido adicional */
-  box-shadow: 0 5px 20px #fff; /* Sombra alrededor */
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px #fff;
   margin-top: 10%;
   margin-bottom: 5%;
 }
 .carusu img {
-  width: 100%; /* Asegura que la imagen ocupe todo el círculo */
-  height: 100%; /* Asegura el ajuste al contenedor */
-  object-fit: cover; /* Recorta la imagen para adaptarse */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .glasusu {
   top: 0;
@@ -390,57 +392,95 @@ body {
   background: #fafafa10;
   backdrop-filter: blur(1.0rem);
   -webkit-backdrop-filter: blur(1.0rem);
-  z-index: -1; /* Coloca la capa detrás de otros elementos */
+  z-index: -1;
+}
+
+/* Estilos responsive para móviles */
+@media (max-width: 768px) {
+  .allsec {
+    flex-direction: column; /* Cambia a diseño vertical */
+    height: auto; /* Ajusta la altura */
+    margin-right: 0; /* Elimina el margen derecho en móviles */
+    padding: 10px; /* Agrega espacio alrededor */
+    margin-top: 15%;
+  }
+  .sec1, .sec2 {
+    width: 100%; /* Toma el ancho completo */
+    margin-bottom: 20px; /* Espacio entre las secciones */
+  }
+  .sec1 {
+    border-radius: 15px; /* Ajusta las esquinas */
+  }
+  .sec2 {
+    border-radius: 15px; /* Ajusta las esquinas */
+  }
+  .carusu {
+    width: 200px; /* Reduce el tamaño del círculo */
+    height: 200px;
+    margin-top: 5%; /* Ajusta los márgenes */
+    margin-bottom: 5%;
+  }
+  .sec1 p, h3 {
+    font-size: 18px; /* Reduce el tamaño de la fuente */
+  }
 }
 
 
-/* progres bar */
-/* Contenedor principal */
-    .progress-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 200px;
-      margin: 20px auto;
-    }
 
-    /* Línea vertical */
-    .progress-line {
-      position: relative;
-      width: 4px;
-      background-color: #ddd;
-      height: 200px;
-    }
+.progress-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px 0;
+}
 
-    /* Estilo de los puntos de cada paso */
-    .step {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 20px;
-      height: 20px;
-      background-color: #ddd;
-      border-radius: 50%;
-      border: 2px solid #fff;
-    }
+.progress-step {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #ccc;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
 
-    /* Icono de verificación */
-    .step.completed {
-      background-color: #ff3d3d; /* Color rojo para los pasos completados */
-    }
+.progress-step.completed {
+  border-color: #4caf50;
+  background-color: #4caf50;
+  color: #fff;
+}
 
-    /* Texto debajo de cada paso */
-    .step-text {
-      text-align: center;
-      margin-top: 5px;
-      font-size: 14px;
-    }
+.progress-step span {
+  position: relative;
+  z-index: 2;
+}
 
-    /* Colocación de cada paso */
-    .step1 { top: 0; }
-    .step2 { top: 33%; }
-    .step3 { top: 66%; }
-    .step4 { top: 100%; }
+.progress-bar-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  background-color: #ccc;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+.progress-step.completed ~ .progress-step::before {
+  background-color: #4caf50;
+}
+
 
 
 

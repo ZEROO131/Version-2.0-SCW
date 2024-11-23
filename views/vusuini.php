@@ -35,20 +35,13 @@ $vehiculo = $musuini->getVehiculoByUsuario($_SESSION['idusu']);
 
     <div class="sec2 glasusu">
         <h1>Sección 2</h1>
-        <div class="progress-container">
-            <div class="progress-line">
-            <div class="step step1 completed"></div>
-            <div class="step step2 completed"></div>
-            <div class="step step3 completed"></div>
-            <div class="step step4 completed"></div>
-            </div>
-            <div class="step-text">Received</div>
-            <div class="step-text">Processed</div>
-            <div class="step-text">Shipped</div>
-            <div class="step-text">Delivered</div>
+        <div class="progress-bar-container">
+            <?php for ($i = 1; $i <= $totalPasos; $i++): ?>
+                <div class="progress-step <?php echo $i <= $pasosCompletados ? 'completed' : ''; ?>">
+                    <span><?php echo $i; ?></span>
+                </div>
+            <?php endfor; ?>
         </div>
-
-        <i class="fa-solid fa-house" style="color: #fff; "></i>
     </div>
 </div>
 
