@@ -17,12 +17,14 @@ body {
 /* _______________________NAV____________________ */
 .side-nav {
   position: absolute;
-    height: 100%;
-    width: 50px; /* ancho inicial pequeño */
-    border: 2px solid #fafafa10;
-    border-radius:  0 20px 20px 0;
-    overflow-x: hidden;
-    transition: width 0.3s;
+  height: 100%;
+  width: 50px; /* Ancho inicial pequeño */
+  border: 2px solid #fafafa10;
+  border-radius: 0 20px 20px 0;
+  overflow-x: hidden;
+  transition: width 0.3s;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos estén en columna */
 }
 
 .glass-effect{
@@ -54,21 +56,23 @@ body {
 }
 
 .side-nav .nav-content {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  overflow-y: auto;
+  flex-grow: 1; /* Asegura que ocupe el espacio restante */
 }
 
 .side-nav.expanded {
-    width: 250px; /* ancho cuando está expandida */
-    -webkit-box-shadow: 21px 6px 49px -24px rgba(0,168,204,1);
-    -moz-box-shadow: 21px 6px 49px -24px rgba(0,168,204,1);
-    box-shadow: 21px 6px 49px -24px rgba(0,168,204,1);
+  width: 250px; /* Ancho cuando está expandida */
+  -webkit-box-shadow: 21px 6px 49px -24px rgba(0,168,204,1);
+  -moz-box-shadow: 21px 6px 49px -24px rgba(0,168,204,1);
+  box-shadow: 21px 6px 49px -24px rgba(0,168,204,1);
 }
 
 .side-nav.expanded .nav-content {
-    display: flex;
+  display: flex; /* Muestra el contenido de la navegación cuando está expandido */
 }
 
 .side-nav a {
@@ -87,6 +91,35 @@ body {
 
 .side-nav.expanded ~ .main-content {
     margin-left: 260px; /* margen cuando la nav está expandida */
+}
+
+.info-section {
+  position: absolute;
+  bottom: 0; /* Siempre abajo */
+  width: 100%; /* Para ocupar todo el ancho del menú */
+  padding: 15px;
+  color: white;
+  text-align: center;
+  border-top: 1px solid #fafafa20;
+  font-size: 16px;
+  background: #fafafa10; /* Aplica el efecto vidrio */
+}
+
+/* Cuando el menú está expandido */
+.side-nav.expanded .info-section {
+  display: block; /* Muestra la información solo cuando el menú está expandido */
+  position: absolute;
+  bottom: 0; /* Siempre en la parte inferior */
+  width: 100%;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  border-top: 1px solid #fafafa20;
+  font-size: 16px;
+  background: #fafafa10; /* Efecto vidrio */
+}
+.side-nav .info-section {
+  display: none;
 }
 /* _______________________NAV____________________ */
 
@@ -389,12 +422,14 @@ body {
 .glasusu {
   top: 0;
   left: 0;
-  background: #fafafa10;
-  backdrop-filter: blur(1.0rem);
-  -webkit-backdrop-filter: blur(1.0rem);
-  z-index: -1;
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  background-color: rgba(46, 45, 45, 0.68);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  z-index: -1; /* Coloca la capa detrás de otros elementos */
+  border: 2px solid #fff;
 }
-
 /* Estilos responsive para móviles */
 @media (max-width: 768px) {
   .allsec {

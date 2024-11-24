@@ -1,43 +1,17 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 19-11-2024 a las 22:08:10
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
-
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Base de datos: `scw`
---
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `asignacion`
---
 
 CREATE TABLE `asignacion` (
   `idasig` bigint(10) NOT NULL,
   `idemple` bigint(10) DEFAULT NULL,
   `idsoli` bigint(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `detsoli`
---
 
 CREATE TABLE `detsoli` (
   `iddetsoli` bigint(10) NOT NULL,
@@ -46,22 +20,13 @@ CREATE TABLE `detsoli` (
   `cantidad` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `dominio`
---
+INSERT INTO `detsoli` (`iddetsoli`, `idsoli`, `idservi`, `cantidad`) VALUES
+(1, 1, 1, 1);
 
 CREATE TABLE `dominio` (
   `iddom` bigint(10) NOT NULL,
   `nomdom` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `empleado`
---
 
 CREATE TABLE `empleado` (
   `idemple` bigint(10) NOT NULL,
@@ -73,18 +38,8 @@ CREATE TABLE `empleado` (
   `idempre` bigint(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `empleado`
---
-
 INSERT INTO `empleado` (`idemple`, `nomemple`, `tipdocu`, `ndocemple`, `emaiemple`, `codbal`, `idempre`) VALUES
 (1, 'Carlos Sánchez', 'CC', 123456789, 'carlos.sanchez@empresa.com', NULL, 1);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `empresa`
---
 
 CREATE TABLE `empresa` (
   `idempre` bigint(10) NOT NULL,
@@ -97,21 +52,12 @@ CREATE TABLE `empresa` (
   `tipempre` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `empresa`
---
-
 INSERT INTO `empresa` (`idempre`, `nit`, `razsoci`, `direempre`, `telempre`, `emaiempre`, `replegal`, `tipempre`) VALUES
 (1, 8001234567, 'Empresa ABC S.A.S.', 'Calle 123 #45-67, Bogotá', 2035462382, 'contacto@empresaabc.com', 'Juan Pérez', 'S.A.S.');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `pagina`
---
-
 CREATE TABLE `pagina` (
   `idpag` bigint(10) NOT NULL,
+  `titupag` varchar(255) NOT NULL,
   `nompag` varchar(100) DEFAULT NULL,
   `rutpag` varchar(255) NOT NULL,
   `mospag` tinyint(1) NOT NULL,
@@ -120,20 +66,10 @@ CREATE TABLE `pagina` (
   `despag` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `pagina`
---
-
-INSERT INTO `pagina` (`idpag`, `nompag`, `rutpag`, `mospag`, `ordpag`, `icopag`, `despag`) VALUES
-(1001, 'usuini', 'views/vusuini.php', 1, 1, '', ''),
-(2001, 'homeemp', '', 0, 0, '', ''),
-(3001, 'homempl', '', 0, 0, '', '');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `perfil`
---
+INSERT INTO `pagina` (`idpag`, `titupag`, `nompag`, `rutpag`, `mospag`, `ordpag`, `icopag`, `despag`) VALUES
+(1001, 'Inicio', 'Inicio', 'views/vusuini.php', 1, 1, 'person-circle-outline', ''),
+(2001, '', 'homeemp', '', 0, 0, '', ''),
+(3001, '', 'homempl', '', 0, 0, '', '');
 
 CREATE TABLE `perfil` (
   `idper` bigint(10) NOT NULL,
@@ -141,20 +77,10 @@ CREATE TABLE `perfil` (
   `pagini` bigint(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `perfil`
---
-
 INSERT INTO `perfil` (`idper`, `nomper`, `pagini`) VALUES
 (1, 'usuario', 1001),
 (2, 'empresa', 2001),
 (3, 'empleado', 3001);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `perxpag`
---
 
 CREATE TABLE `perxpag` (
   `idperpag` bigint(10) NOT NULL,
@@ -162,20 +88,10 @@ CREATE TABLE `perxpag` (
   `idper` bigint(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `perxpag`
---
-
 INSERT INTO `perxpag` (`idperpag`, `idpag`, `idper`) VALUES
 (1, 1001, 1),
 (2, 2001, 2),
 (3, 3001, 3);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `servicios`
---
 
 CREATE TABLE `servicios` (
   `idservi` bigint(10) NOT NULL,
@@ -186,11 +102,8 @@ CREATE TABLE `servicios` (
   `idempre` bigint(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `solicitud`
---
+INSERT INTO `servicios` (`idservi`, `nit`, `detservi`, `precio`, `tipservi`, `idempre`) VALUES
+(1, 12345, 'Lavado, Secado, Aspirado', 30000, 'Normal', 1);
 
 CREATE TABLE `solicitud` (
   `idsoli` bigint(10) NOT NULL,
@@ -201,11 +114,8 @@ CREATE TABLE `solicitud` (
   `idempre` bigint(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `ubicacion`
---
+INSERT INTO `solicitud` (`idsoli`, `fecha`, `estasoli`, `idvehi`, `idusu`, `idempre`) VALUES
+(1, '2024-11-23', '', 1, 1, 1);
 
 CREATE TABLE `ubicacion` (
   `codubi` bigint(10) NOT NULL,
@@ -213,12 +123,6 @@ CREATE TABLE `ubicacion` (
   `depubi` varchar(100) DEFAULT NULL,
   `idusu` bigint(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `usuario`
---
 
 CREATE TABLE `usuario` (
   `idusu` bigint(10) NOT NULL,
@@ -233,10 +137,6 @@ CREATE TABLE `usuario` (
   `idper` bigint(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `usuario`
---
-
 INSERT INTO `usuario` (`idusu`, `nomusu`, `apeusu`, `emailusu`, `paswusu`, `tipdocusu`, `ndocusu`, `telusu`, `codubi`, `idper`) VALUES
 (1, 'Juan', 'Sanchez', 'juansanchez131jd@gmail.com', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 1011322322, 3227254108, NULL, 1),
 (2, 'Jhojan Esteban', 'Cancelado', 'Esteban@gmail.com', '123456', 'CC', 123456789, 3214567899, NULL, 2),
@@ -244,12 +144,6 @@ INSERT INTO `usuario` (`idusu`, `nomusu`, `apeusu`, `emailusu`, `paswusu`, `tipd
 (4, 'Juan', 'Pinilla', '2', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 1011, 322, NULL, 2),
 (5, 'Juan', 'David', '3', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 10111, 3222, NULL, 3),
 (10, 'Dilan', 'gei', '1010', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 101010, 32222, NULL, 1);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `valor`
---
 
 CREATE TABLE `valor` (
   `idval` bigint(10) NOT NULL,
@@ -261,12 +155,6 @@ CREATE TABLE `valor` (
   `idusu` bigint(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `vehiculo`
---
-
 CREATE TABLE `vehiculo` (
   `idvehi` bigint(10) NOT NULL,
   `idusu` bigint(10) DEFAULT NULL,
@@ -277,106 +165,60 @@ CREATE TABLE `vehiculo` (
   `tipvehi` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `vehiculo`
---
-
 INSERT INTO `vehiculo` (`idvehi`, `idusu`, `placa`, `color`, `marca`, `modelvehi`, `tipvehi`) VALUES
 (1, 1, 'BHI993', 'Azul', 'Volkswagen', '1996', 'Carro\r\n'),
 (2, NULL, 'JHG 88', 'Blanco', 'AUDI', '2012', 'CARRO');
 
---
--- Índices para tablas volcadas
---
 
---
--- Indices de la tabla `asignacion`
---
 ALTER TABLE `asignacion`
   ADD PRIMARY KEY (`idasig`),
   ADD KEY `idemple` (`idemple`),
   ADD KEY `idsoli` (`idsoli`);
 
---
--- Indices de la tabla `detsoli`
---
 ALTER TABLE `detsoli`
   ADD PRIMARY KEY (`iddetsoli`),
   ADD KEY `idsoli` (`idsoli`),
   ADD KEY `idservi` (`idservi`);
 
---
--- Indices de la tabla `dominio`
---
 ALTER TABLE `dominio`
   ADD PRIMARY KEY (`iddom`);
 
---
--- Indices de la tabla `empleado`
---
 ALTER TABLE `empleado`
   ADD PRIMARY KEY (`idemple`),
   ADD KEY `idempre` (`idempre`);
 
---
--- Indices de la tabla `empresa`
---
 ALTER TABLE `empresa`
   ADD PRIMARY KEY (`idempre`);
 
---
--- Indices de la tabla `pagina`
---
 ALTER TABLE `pagina`
   ADD PRIMARY KEY (`idpag`);
 
---
--- Indices de la tabla `perfil`
---
 ALTER TABLE `perfil`
   ADD PRIMARY KEY (`idper`);
 
---
--- Indices de la tabla `perxpag`
---
 ALTER TABLE `perxpag`
   ADD PRIMARY KEY (`idperpag`),
   ADD KEY `idpag` (`idpag`),
   ADD KEY `idper` (`idper`);
 
---
--- Indices de la tabla `servicios`
---
 ALTER TABLE `servicios`
   ADD PRIMARY KEY (`idservi`),
   ADD KEY `idempre` (`idempre`);
 
---
--- Indices de la tabla `solicitud`
---
 ALTER TABLE `solicitud`
   ADD PRIMARY KEY (`idsoli`),
   ADD KEY `idvehi` (`idvehi`),
   ADD KEY `idusu` (`idusu`),
   ADD KEY `idempre` (`idempre`);
 
---
--- Indices de la tabla `ubicacion`
---
 ALTER TABLE `ubicacion`
   ADD PRIMARY KEY (`codubi`);
 
---
--- Indices de la tabla `usuario`
---
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`idusu`),
   ADD KEY `codubi` (`codubi`),
   ADD KEY `idper` (`idper`);
 
---
--- Indices de la tabla `valor`
---
 ALTER TABLE `valor`
   ADD PRIMARY KEY (`idval`),
   ADD KEY `iddom` (`iddom`),
@@ -385,156 +227,81 @@ ALTER TABLE `valor`
   ADD KEY `idvehi` (`idvehi`),
   ADD KEY `idusu` (`idusu`);
 
---
--- Indices de la tabla `vehiculo`
---
 ALTER TABLE `vehiculo`
   ADD PRIMARY KEY (`idvehi`),
   ADD KEY `vehiculo_ibfk_1` (`idusu`);
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
 
---
--- AUTO_INCREMENT de la tabla `asignacion`
---
 ALTER TABLE `asignacion`
   MODIFY `idasig` bigint(10) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT de la tabla `detsoli`
---
 ALTER TABLE `detsoli`
-  MODIFY `iddetsoli` bigint(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `iddetsoli` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
---
--- AUTO_INCREMENT de la tabla `dominio`
---
 ALTER TABLE `dominio`
   MODIFY `iddom` bigint(10) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT de la tabla `empleado`
---
 ALTER TABLE `empleado`
   MODIFY `idemple` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
---
--- AUTO_INCREMENT de la tabla `empresa`
---
 ALTER TABLE `empresa`
   MODIFY `idempre` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
---
--- AUTO_INCREMENT de la tabla `pagina`
---
 ALTER TABLE `pagina`
   MODIFY `idpag` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3002;
 
---
--- AUTO_INCREMENT de la tabla `perfil`
---
 ALTER TABLE `perfil`
   MODIFY `idper` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
---
--- AUTO_INCREMENT de la tabla `perxpag`
---
 ALTER TABLE `perxpag`
   MODIFY `idperpag` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
---
--- AUTO_INCREMENT de la tabla `servicios`
---
 ALTER TABLE `servicios`
-  MODIFY `idservi` bigint(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idservi` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
---
--- AUTO_INCREMENT de la tabla `solicitud`
---
 ALTER TABLE `solicitud`
-  MODIFY `idsoli` bigint(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idsoli` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
---
--- AUTO_INCREMENT de la tabla `ubicacion`
---
 ALTER TABLE `ubicacion`
   MODIFY `codubi` bigint(10) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT de la tabla `usuario`
---
 ALTER TABLE `usuario`
   MODIFY `idusu` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
---
--- AUTO_INCREMENT de la tabla `valor`
---
 ALTER TABLE `valor`
   MODIFY `idval` bigint(10) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT de la tabla `vehiculo`
---
 ALTER TABLE `vehiculo`
   MODIFY `idvehi` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
---
--- Restricciones para tablas volcadas
---
 
---
--- Filtros para la tabla `asignacion`
---
 ALTER TABLE `asignacion`
   ADD CONSTRAINT `asignacion_ibfk_1` FOREIGN KEY (`idemple`) REFERENCES `empleado` (`idemple`),
   ADD CONSTRAINT `asignacion_ibfk_2` FOREIGN KEY (`idsoli`) REFERENCES `solicitud` (`idsoli`);
 
---
--- Filtros para la tabla `detsoli`
---
 ALTER TABLE `detsoli`
   ADD CONSTRAINT `detsoli_ibfk_1` FOREIGN KEY (`idsoli`) REFERENCES `solicitud` (`idsoli`),
   ADD CONSTRAINT `detsoli_ibfk_2` FOREIGN KEY (`idservi`) REFERENCES `servicios` (`idservi`);
 
---
--- Filtros para la tabla `empleado`
---
 ALTER TABLE `empleado`
   ADD CONSTRAINT `empleado_ibfk_1` FOREIGN KEY (`idempre`) REFERENCES `empresa` (`idempre`);
 
---
--- Filtros para la tabla `perxpag`
---
 ALTER TABLE `perxpag`
   ADD CONSTRAINT `perxpag_ibfk_1` FOREIGN KEY (`idpag`) REFERENCES `pagina` (`idpag`),
   ADD CONSTRAINT `perxpag_ibfk_2` FOREIGN KEY (`idper`) REFERENCES `perfil` (`idper`);
 
---
--- Filtros para la tabla `servicios`
---
 ALTER TABLE `servicios`
   ADD CONSTRAINT `servicios_ibfk_1` FOREIGN KEY (`idempre`) REFERENCES `empresa` (`idempre`);
 
---
--- Filtros para la tabla `solicitud`
---
 ALTER TABLE `solicitud`
   ADD CONSTRAINT `solicitud_ibfk_1` FOREIGN KEY (`idvehi`) REFERENCES `vehiculo` (`idvehi`),
   ADD CONSTRAINT `solicitud_ibfk_2` FOREIGN KEY (`idusu`) REFERENCES `usuario` (`idusu`),
   ADD CONSTRAINT `solicitud_ibfk_3` FOREIGN KEY (`idempre`) REFERENCES `empresa` (`idempre`);
 
---
--- Filtros para la tabla `usuario`
---
 ALTER TABLE `usuario`
   ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`codubi`) REFERENCES `ubicacion` (`codubi`),
   ADD CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`idper`) REFERENCES `perfil` (`idper`);
 
---
--- Filtros para la tabla `valor`
---
 ALTER TABLE `valor`
   ADD CONSTRAINT `valor_ibfk_1` FOREIGN KEY (`iddom`) REFERENCES `dominio` (`iddom`),
   ADD CONSTRAINT `valor_ibfk_2` FOREIGN KEY (`idempre`) REFERENCES `empresa` (`idempre`),
@@ -542,12 +309,8 @@ ALTER TABLE `valor`
   ADD CONSTRAINT `valor_ibfk_4` FOREIGN KEY (`idvehi`) REFERENCES `vehiculo` (`idvehi`),
   ADD CONSTRAINT `valor_ibfk_5` FOREIGN KEY (`idusu`) REFERENCES `usuario` (`idusu`);
 
---
--- Filtros para la tabla `vehiculo`
---
 ALTER TABLE `vehiculo`
   ADD CONSTRAINT `vehiculo_ibfk_1` FOREIGN KEY (`idusu`) REFERENCES `usuario` (`idusu`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

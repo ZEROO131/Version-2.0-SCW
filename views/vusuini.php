@@ -35,14 +35,6 @@ $vehiculo = $musuini->getVehiculoByUsuario($_SESSION['idusu']);
 
     <div class="sec2 glasusu">
         <h1>Sección 2</h1>
-        <div class="progress-bar-container">
-            <?php for ($i = 1; $i <= $totalPasos; $i++): ?>
-                <div class="progress-step <?php echo $i <= $pasosCompletados ? 'completed' : ''; ?>">
-                    <span><?php echo $i; ?></span>
-                </div>
-            <?php endfor; ?>
-        </div>
+        <div class="progress-container">
     </div>
 </div>
-
-

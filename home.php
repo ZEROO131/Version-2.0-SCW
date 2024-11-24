@@ -17,7 +17,18 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="stylesheet" href="css/login.css">
     <link rel="icon" href="img/LOGO.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
+<style>
+    body {
+    background-color: #2e2d2d;
+    background-image: 
+        radial-gradient(at 47% 33%, hsl(190.59, 100%, 40%) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, hsl(0.00, 1%, 18%) 0, transparent 55%);
+}
+</style>
 <body>
 <?php
     $pg = isset($_REQUEST["pg"]) ? $_REQUEST["pg"] : NULL;
@@ -54,7 +65,8 @@ if (session_status() === PHP_SESSION_NONE) {
         ?>
     </section>
 
+
+</body> 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-</body>
 </html>
