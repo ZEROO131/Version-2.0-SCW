@@ -16,3 +16,4 @@ document.getElementById("mobile-menu").addEventListener("click", function() {
 document.getElementById('btnCerrarSesion').addEventListener('click', function() {
     window.location.href = 'control.php?cerrar_sesion=true';
 });
+

@@ -312,6 +312,7 @@ body {
 
 
 
+
 /* _____________________INFO_____________________ */
 /* ____________________FOOTER____________________ */
 .footer {
@@ -393,6 +394,7 @@ body {
   align-items: center;
   flex-direction: column;
   height: auto;
+  margin-right: 10px;
 }
 .sec1 p, h3 {
   color: #fff;
@@ -403,6 +405,13 @@ body {
   border: 2px solid #fff;
   width: 50%;
   height: auto;
+  margin-left: 10px;
+  text-align: center;
+}
+.sec2 p, h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
 }
 .carusu {
   width: 300px;
@@ -462,62 +471,104 @@ body {
 
 
 
-.progress-bar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+/* _________________INFO USUARIO____________________ */
+
+.profile-container {
+  position: absolute; /* Posicionamiento absoluto */
+  left: 50%; /* Centrado en el eje X */
+  transform: translateX(-50%); /* Ajuste para centrar completamente */
+  width: 150px;
+  height: 150px;
+  top: 20px;
+}
+
+.profile-image {
   width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 10px 0;
-}
-
-.progress-step {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border: 2px solid #ccc;
+  height: 100%;
   border-radius: 50%;
-  background-color: #fff;
+  object-fit: cover;
+  z-index: 2; /* Asegura que la imagen esté al frente */
+}
+
+.moving-circle {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 10px dashed #fff; /* Línea circular segmentada */
+  border-style: dashed; /* Segmentos estilo "dashed" */
+  border-width: 3px;
+  border-color: #fff;
+  border-spacing: 50px; /* Espaciado entre segmentos */
+  animation: spin 30s linear infinite; /* Animación más lenta */
+  z-index: 1; /* Detrás de la imagen */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* _________________barra de pasos_______________ */
+
+.barrap{
+  margin: 20px 20px 20px 20px;
+}
+
+.progress-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-weight: bold;
-  color: #ccc;
-  z-index: 1;
-  transition: 0.3s ease-in-out;
-}
-
-.progress-step.completed {
-  border-color: #4caf50;
-  background-color: #4caf50;
-  color: #fff;
-}
-
-.progress-step span {
+  justify-content: space-between;
+  margin: 20px 0;
   position: relative;
-  z-index: 2;
 }
-
-.progress-bar-container::before {
+.progress-step {
+  text-align: center;
+  position: relative;
+  font-size: 18px; /* Aumentar tamaño del texto */
+  color: #ffffff; /* Color base */
+  transition: color 0.3s ease; /* Transición suave en el cambio de color */
+}
+.progress-step::before {
   content: '';
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.progress-step.completed::before {
+  background: #00A8CC;
+}
+.progress-step-label {
+  margin-top: 10px;
+  font-size: 16px; /* Aumentar tamaño del texto */
+  transition: color 2.0s ease; /* Transición suave en el cambio de color */
+}
+.progress-bar {
   position: absolute;
   top: 50%;
-  left: 20px;
-  right: 20px;
-  height: 4px;
-  background-color: #ccc;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #ccc;
   z-index: 0;
-  transform: translateY(-50%);
 }
-
-.progress-step.completed ~ .progress-step::before {
-  background-color: #4caf50;
+.progress-bar-inner {
+  height: 100%;
+  background: #00A8CC;
+  width: 0%; /* Se actualizará con JS */
+  transition: width 0.3s ease;
+  z-index: 1;
 }
-
-
-
 
 /* _________________FIN CSS ACTORES_________________ */
 

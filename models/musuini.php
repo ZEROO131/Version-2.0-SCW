@@ -1,4 +1,5 @@
 <?php 
+
 class Musuini{
 private $idvehi; 
 private $idusu; 
@@ -7,6 +8,7 @@ private $color;
 private $marca; 
 private $modelvehi;
 private $tipvehi;
+
 
 
 
