@@ -10,7 +10,7 @@ include "controllers/cmenu.php";
                     <ion-icon name="<?=$dt['icopag'];?>" style="color: #00A8CC;"></ion-icon>
                          <?=$dt['nompag'];?>
                     </a>
-                <?php 
+                <?php    
 				}
 			}
 			?>

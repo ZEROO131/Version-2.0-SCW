@@ -87,6 +87,9 @@ class Musuinf{
     //metodos publicos
 	public function getAll(){
 		$res = NULL;
+
+        
+
 		$sql = "SELECT * FROM usuario";
 		$modelo = new Conexion();
 		$conexion = $modelo->get_conexion();
@@ -97,83 +100,70 @@ class Musuinf{
 	}
     
     public function getOne() {
-        $sql = "SELECT * FROM usuario WHERE idusu = :idusu";
+        $res = NULL;
+    
+        // Verificamos que la sesión esté iniciada
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+    
+        // Validamos que exista un id de usuario en la sesión
+        if (isset($_SESSION['idusu'])) {
+            $idusu = $_SESSION['idusu'];
+            $sql = "SELECT idusu, nomusu, apeusu, emailusu, paswusu, tipdocusu, ndocusu, telusu, codubi, idper, imgusu 
+                    FROM usuario 
+                    WHERE idusu = :idusu";
+            $modelo = new Conexion();
+            $conexion = $modelo->get_conexion();
+            $result = $conexion->prepare($sql);
+            $result->bindParam(":idusu", $idusu);
+            $result->execute();
+            $res = $result->fetchAll(PDO::FETCH_ASSOC);
+        }
+        return $res;
+    }
+    public function save() {
+        $sql = "INSERT INTO usuario (nomusu, apeusu, emailusu, paswusu, tipdocusu, ndocusu, telusu, codubi, idper, imgusu) VALUES (:nomusu, :apeusu, :emailusu, :paswusu, :tipdocusu, :ndocusu, :telusu, :codubi, :idper, :imgusu)";
+        $modelo = new Conexion();
+        $conexion = $modelo->get_conexion();
+        $result = $conexion->prepare($sql);
+        $result->bindParam(":idusu", $this->idusu);    
+        $result->bindParam(":nomusu", $this->nomusu);
+        $result->bindParam(":apeusu", $this->apeusu);
+        $result->bindParam(":emailusu", $this->emailusu);
+        $result->bindParam(":paswusu", $this->paswusu);
+        $result->bindParam(":tipdocusu", $this->tipdocusu);
+        $result->bindParam(":ndocusu", $this->ndocusu);
+        $result->bindParam(":telusu", $this->telusu);
+        $result->bindParam(":codubi", $this->codubi);
+        $result->bindParam(":idper", $this->idper);
+        $result->bindParam(":imgusu", $this->imgusu);
+        $result->execute();
+    }
+
+    public function edit() {
+        $sql = "UPDATE usuario SET nomusu=:nomusu, apeusu=:apeusu, emailusu=:emailusu, paswusu=:paswusu, tipdocusu=:tipdocusu, ndocusu=:ndocusu, telusu=:telusu, codubi=:codubi, idper=:idper, imgusu=:imgusu WHERE idusu=:idusu";
+        $modelo = new Conexion();
+        $conexion = $modelo->get_conexion();
+        $result = $conexion->prepare($sql);
+        $result->bindParam(":idusu", $this->idusu);
+        $result->bindParam(":nomusu", $this->nomusu);
+        $result->bindParam(":emausu", $this->emausu);
+        $result->bindParam(":celusu", $this->celusu);
+        $result->bindParam(":pssusu", $this->pssusu);
+        $result->bindParam(":codubi", $this->codubi);
+        $result->bindParam(":idper", $this->idper);
+        $result->bindParam(":idval", $this->idval);
+        $result->execute();
+    }
+
+    public function del() {
+        $sql = "DELETE FROM usuario WHERE idusu=:idusu";
         $modelo = new Conexion();
         $conexion = $modelo->get_conexion();
         $result = $conexion->prepare($sql);
         $result->bindParam(":idusu", $this->idusu);
         $result->execute();
-        return $result->fetchAll(PDO::FETCH_ASSOC);  // Devuelve los datos en un array asociativo
-    }
-
-    function guardarUsuario($nomusu, $apeusu, $emailusu, $telusu) {
-        if ($_SESSION['idusu']) {  // Verificar que haya una sesión activa
-            $sql = "INSERT INTO usuario (nomusu, apeusu, emailusu, telusu) VALUES (:nomusu, :apeusu, :emailusu, :telusu)";
-    
-            $modelo = new Conexion();
-            $conexion = $modelo->get_conexion();
-            $stmt = $conexion->prepare($sql);
-    
-            // Asignar los valores para la consulta
-            $stmt->bindParam(":nomusu", $nomusu);
-            $stmt->bindParam(":apeusu", $apeusu);
-            $stmt->bindParam(":emailusu", $emailusu);
-            $stmt->bindParam(":telusu", $telusu);
-    
-            // Ejecutar la consulta
-            $stmt->execute();
-    
-            return true; // Si se ejecuta correctamente
-        } else {
-            return false; // Si no hay sesión activa
-        }
-    }
-
-    function editarUsuario($idusu, $nomusu, $apeusu, $emailusu, $telusu) {
-        // Verificar que el ID de usuario de la sesión coincida con el ID a modificar
-        if ($_SESSION['idusu'] == $idusu) {
-            $sql = "UPDATE usuario SET nomusu = :nomusu, apeusu = :apeusu, emailusu = :emailusu, telusu = :telusu WHERE idusu = :idusu";
-    
-            $modelo = new Conexion();
-            $conexion = $modelo->get_conexion();
-            $stmt = $conexion->prepare($sql);
-    
-            // Asignar los valores para la consulta
-            $stmt->bindParam(":nomusu", $nomusu);
-            $stmt->bindParam(":apeusu", $apeusu);
-            $stmt->bindParam(":emailusu", $emailusu);
-            $stmt->bindParam(":telusu", $telusu);
-            $stmt->bindParam(":idusu", $idusu);
-    
-            // Ejecutar la consulta
-            $stmt->execute();
-    
-            return true; // Si se ejecuta correctamente
-        } else {
-            return false; // Si no es el usuario correcto
-        }
-    }
-
-    function eliminarUsuario($idusu) {
-        // Verificar que el ID de usuario de la sesión coincida con el ID a eliminar
-        if ($_SESSION['idusu'] == $idusu) {
-            $sql = "DELETE FROM usuario WHERE idusu = :idusu";
-    
-            $modelo = new Conexion();
-            $conexion = $modelo->get_conexion();
-            $stmt = $conexion->prepare($sql);
-            $stmt->bindParam(":idusu", $idusu);
-    
-            // Ejecutar la consulta
-            $stmt->execute();
-    
-            // Puedes agregar la lógica para cerrar sesión aquí si quieres que cierre la sesión después de eliminar al usuario.
-            // cerrarSesion();
-    
-            return true; // Usuario eliminado
-        } else {
-            return false; // Si no es el usuario correcto
-        }
     }
 }
 ?>
