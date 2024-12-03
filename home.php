@@ -23,10 +23,12 @@ if (session_status() === PHP_SESSION_NONE) {
 </head>
 <style>
     body {
-    background-color: #2e2d2d;
+        background-color: #2e2d2d; /* Color principal */
     background-image: 
-        radial-gradient(at 47% 33%, hsl(190.59, 100%, 40%) 0, transparent 59%), 
-        radial-gradient(at 82% 65%, hsl(0.00, 1%, 18%) 0, transparent 55%);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 75%, transparent 75%, transparent);
+    background-size: 20px 20px; /* Tamaño del patrón */
+    background-blend-mode: overlay; /* Combina capas para más realismo */
 }
 </style>
 <body>

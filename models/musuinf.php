@@ -1,4 +1,5 @@
 <?php
+require_once('conexion.php');
 class Musuinf{
     private $idusu;
     private $nomusu;
@@ -142,20 +143,21 @@ class Musuinf{
     }
 
     public function edit() {
-        $sql = "UPDATE usuario SET nomusu=:nomusu, apeusu=:apeusu, emailusu=:emailusu, paswusu=:paswusu, tipdocusu=:tipdocusu, ndocusu=:ndocusu, telusu=:telusu, codubi=:codubi, idper=:idper, imgusu=:imgusu WHERE idusu=:idusu";
+        $sql = "UPDATE usuario SET nomusu=:nomusu, apeusu=:apeusu, emailusu=:emailusu, ndocusu=:ndocusu, telusu=:telusu, codubi=:codubi, imgusu=:imgusu WHERE idusu=:idusu";
         $modelo = new Conexion();
         $conexion = $modelo->get_conexion();
         $result = $conexion->prepare($sql);
         $result->bindParam(":idusu", $this->idusu);
         $result->bindParam(":nomusu", $this->nomusu);
-        $result->bindParam(":emausu", $this->emausu);
-        $result->bindParam(":celusu", $this->celusu);
-        $result->bindParam(":pssusu", $this->pssusu);
+        $result->bindParam(":apeusu", $this->apeusu);
+        $result->bindParam(":emailusu", $this->emailusu);
+        $result->bindParam(":ndocusu", $this->ndocusu);
+        $result->bindParam(":telusu", $this->telusu);
         $result->bindParam(":codubi", $this->codubi);
-        $result->bindParam(":idper", $this->idper);
-        $result->bindParam(":idval", $this->idval);
+        $result->bindParam(":imgusu", $this->imgusu);
         $result->execute();
     }
+    
 
     public function del() {
         $sql = "DELETE FROM usuario WHERE idusu=:idusu";

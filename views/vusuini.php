@@ -6,6 +6,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 include('models/musuini.php');
 require_once('controllers/cusubar.php');
+require_once('controllers/cusuiniser.php');
 
 // Crea una instancia de la clase Musuini
 $musuini = new Musuini();
@@ -60,10 +61,25 @@ $progress = $data['progress']; // El progreso calculado desde PHP
                 </div>
             <?php endif; ?>
         </div>
-        <div>
-
+            <hr>
+        <div class="serva">
+                <h1>Servicios Asignados</h1>
+            <?php if (!empty($servicios)): ?>
+                <ul>
+                    <?php foreach ($servicios as $servicio): ?>
+                        <li>
+                            <span class="servicio-titulo"><?= htmlspecialchars($servicio['detservi']) ?></span>
+                            <div class="servicio-detalle">Tipo: <?= htmlspecialchars($servicio['tipservi']) ?></div>
+                            <hr>
+                            <div class="servicio-detalle">Precio: <h3>$<?= number_format($servicio['precio'], 2) ?></h3></div>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php else: ?>
+                <p style="text-align: center;">No se encontraron servicios asignados para este usuario.</p>
+            <?php endif; ?>
         </div>
-        
+
     </div>
 </div>
 
