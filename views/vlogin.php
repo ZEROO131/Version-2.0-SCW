@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
+
  <div class="wrapper">
-    
+
 <!----------------------------- Form box ----------------------------------->       
 <div class="forms-box">
         
@@ -22,8 +25,9 @@
                 <header>Ingresa</header>
             </div>
             <div class="input-box" style="margin-bottom: 5px;">
-                <input type="text" class="input-field" placeholder="Email" name="usu">
+                <input type="text" class="input-field" placeholder="Email" name="usu" id="email" required>
                 <i class="bx bx-user"></i>
+                <div id="email-error" style="color: red; display: none;">Debe ingresar un correo válido (con '@').</div>
             </div>
             <div class="input-box" style="margin-bottom: 5px;">
                 <input type="password" class="input-field" placeholder="Contraseña" name="pss">
@@ -41,8 +45,15 @@
                     <label><a href="#">Olvidaste tu contraseña?</a></label>
                 </div>
             </div>
+            <?php
+    if (isset($_GET['err']) && $_GET['err'] == 'oK') {
+        echo "<div class='alert alert-danger' role='alert'>Usuario o contraseña incorrectos. Intenta de nuevo.</div>";
+    }
+    ?> 
         </div>
+
     </form>
+
         <!------------------- registration form -------------------------->
         <div class="register-container" id="register">
             <div class="top">
@@ -124,5 +135,19 @@
 
 </script>
 
+<script>
+    // Obtener el campo de correo y el mensaje de error
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('email-error');
+
+    // Función que verifica si el correo contiene el símbolo "@"
+    emailInput.addEventListener('input', function() {
+        if (emailInput.value.includes('@')) {
+            emailError.style.display = 'none'; // Oculta el mensaje si tiene "@"
+        } else {
+            emailError.style.display = 'block'; // Muestra el mensaje si no tiene "@"
+        }
+    });
+</script>
 </body>
 </html>

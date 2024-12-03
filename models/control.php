@@ -45,8 +45,9 @@ function valida($usu, $pas) {
 }
 
 function red() {
-    echo "<script>window.location='../index.php?err=oK';</script>";
+    echo "<script>window.location='../index.php?pg=1002&err=oK';</script>";
 }
+
 
 function ingr($usu, $pas) {
     $res = NULL;
