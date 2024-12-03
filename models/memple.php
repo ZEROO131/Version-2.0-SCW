@@ -8,8 +8,7 @@ class Memple {
     private $tipdocu;
     private $ndocemple;
     private $emaiemple;
-    private $codbal; 
-    private $idempre;
+    private $direempre;
 
     // Métodos get
     public function getIdemple(){
@@ -27,11 +26,8 @@ class Memple {
     public function getEmaiemple(){
         return $this->emaiemple;
     }
-    public function getCodbal(){
-        return $this->codbal;
-    }
     public function getIdempre(){
-        return $this->idempre;
+        return $this->direempre;
     }
 
     // Métodos set
@@ -50,11 +46,9 @@ class Memple {
     public function setEmaiemple($emaiemple){
         $this->emaiemple = $emaiemple;
     }
-    public function setCodbal($codbal){
-        $this->codbal = $codbal;
-    }
-    public function setIdempre($idempre){
-        $this->idempre = $idempre;
+    
+    public function setDireempre($direempre){
+        $this->direempre = $direempre;
     }
 
     // Métodos públicos

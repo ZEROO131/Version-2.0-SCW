@@ -1,8 +1,8 @@
 <footer class="footer glass-effect">
         <div class="footer-info">
-            <p>Tel: (000) 000 0000</p>
-            <p>Email: contacto@ejemplo.com</p>
-            <p>Dirección: Calle Ejemplo, 123, Ciudad, País</p>
+            <p>Tel: (322) 725 4108</p>
+            <p>Email: systemcarwash2024@gmail.com</p>
+            <p>Dirección: Chia Cundinamarca</p>
         </div>
         <div class="footer-social">
             <a href="#"><i class="fab fa-facebook-f"></i></a>

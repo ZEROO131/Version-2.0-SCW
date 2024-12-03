@@ -8,11 +8,14 @@
 
 <div class="container">
     <br>
+    <br>
+    <br>
+    <br>
     <!-- Solicitudes de Servicio -->
     <div id="solicitudes-servicio" class="card mb-4">
         <div class="card-body">
-            <h3 class="text-center mb-4">Solicitudes de Servicio</h3>
-            <table class="table table-striped" style="width:100%">
+            <h3 class="text-center mb-4" style="color: black;">Solicitudes de Servicio</h3>
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>ID Solicitud</th>
@@ -29,43 +32,6 @@
                                 <td><?= htmlspecialchars($solicitud['fecha']); ?></td>
                                 <td><?= htmlspecialchars($solicitud['placa_vehiculo']); ?></td>
                                 <td><?= htmlspecialchars($solicitud['nombre_completo']); ?></td>
-                                <td>
-                                    <a href="#" class="btnAbrirPopup" data-id="<?= $solicitud['idsoli']; ?>" title="Editar">
-                                        <i class="fa-solid fa-pen-to-square fa-2x"></i>
-                                    </a>
-                                    <br>
-                                    <a href="home.php?pg=<?= $pg; ?>&idsoli=<?= $d['idsoli']; ?>&opera=" title="Eliminar">
-                                        <i class="fa-solid fa-trash fa-2x"></i>
-                                    </a>
-                                </td>
-
-                                <!-- Popup -->
-                                <div id="miPopup" class="popup">
-                                    <div class="popup-contenido">
-                                        <span id="btnCerrarPopup" class="cerrar">&times;</span>
-                                        <h2>Editar Solicitud</h2>
-                                        <form id="formEditar" method="POST" action="editar_solicitud.php">
-                                            <input type="hidden" id="idSolicitud" name="idSolicitud">
-                                            <div class="form-group">
-                                                <label for="fecha">Fecha</label>
-                                                <input type="date" id="fecha" name="fecha" class="form-control" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="placa">Placa del Vehículo</label>
-                                                <input type="text" id="placa" name="placa" class="form-control" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="nombre">Nombre del Usuario</label>
-                                                <input type="text" id="nombre" name="nombre" class="form-control" required>
-                                            </div>
-                                            <div class="text-center">
-                                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-
-                                </td>
                             </tr>
                         <?php } ?>
                     <?php } else { ?>
@@ -82,7 +48,7 @@
     <!-- Asignar Servicios a Empleados -->
     <div id="asignar-servicios" class="card mb-4">
         <div class="card-body">
-            <h3 class="text-center mb-6">Asignar Servicios</h3>
+            <h3 class="text-center mb-6" style="color: black;">Asignar Servicios</h3>
             <form name="frm1" action="#" method="POST" enctype="multipart/form-data">
                 <!-- Campo de Selección de Solicitudes -->
                 <div class="form-group mb-3">

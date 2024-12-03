@@ -2,12 +2,16 @@
     include("controllers/cemple.php"); // Controlador para empleados
     include("controllers/cserv.php"); // Controlador para servicios
 ?>
+    <br>
+    <br>
+    <br>
 <div class="container">
     <br>
+
         <!-- Crear Empleados -->
     <div id="crear-empleados" class="card mb-4">
         <div class="card-body">
-            <h3 class="text-center mb-4">Crear Empleados</h3>
+            <h3 class="text-center mb-4" style="color: black;">Crear Empleados</h3>
             <form name="frm1" action="#" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <div class="form-group col-md-6">
@@ -52,12 +56,41 @@
                 </div>
             </form>
         </div>
+    <br>
+        <div id="lista-empleados" class="card mb-4" >
+            <div class="card-body">
+                <h3 class="text-center mb-4" style="color: black;">Lista de Empleados</h3>
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID Empleado</th>
+                            <th>Nombre del Empleado</th>
+                            <th>Tipo de Documento</th>
+                            <th>Número de Documento</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($det as $detm) { ?>
+                            <tr>
+                                <td><?= htmlspecialchars($detm['idemple']); ?></td>
+                                <td><?= htmlspecialchars($detm['nomemple']); ?></td>
+                                <td><?= htmlspecialchars($detm['tipdocu']); ?></td>
+                                <td><?= htmlspecialchars($detm['ndocemple']); ?></td>
+                                <td><?= htmlspecialchars($detm['emaiemple']); ?></td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+        </div>
     </div>
-    <br><br>
+
+    </div>
+    <br>
         <!-- Crear Servicios -->
     <div id="crear-servicios" class="card mb-4">
         <div class="card-body">
-            <h3 class="text-center mb-4">Crear Servicios</h3>
+            <h3 class="text-center mb-4" style="color: black;">Crear Servicios</h3>
             <form name="frm1" action="#" method="POST" enctype="multipart/form-data">
                 <div class="form-group col-md-6">
                     <label for="nombre-servicio">Detalle de servicio</label>
@@ -79,6 +112,34 @@
                 </div>
             </form>
         </div>
+    
+
+        <div id="lista-empleados" class="card mb-4">
+            <div class="card-body">
+                <h3 class="text-center mb-4" style="color: black;">Lista de Empleados</h3>
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre del servicio</th>
+                            <th>Precio</th>
+                            <th>Tipo de servicio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($des as $servicio) { ?>
+                            <tr>
+                                <td><?= htmlspecialchars($servicio['idservi']); ?></td>
+                                <td><?= htmlspecialchars($servicio['detservi']); ?></td>
+                                <td><?= htmlspecialchars($servicio['precio']); ?></td>
+                                <td><?= htmlspecialchars($servicio['tipservi']); ?></td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+        </div>
     </div>
+</div>
+
     <a href="home.php?pg=2001" class="btn btn-secondary">Regresar</a>
 </div>

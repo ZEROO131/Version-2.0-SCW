@@ -3,10 +3,13 @@
 ?>
 <div class="container">
     <br>
+    <br>
+    <br>
+    <br>
     <!-- Registrar Vehículos -->
     <div id="registrar-vehiculos" class="card mb-6">
         <div class="card-body">
-            <h3 class="text-center mb-4">Registrar Vehículos</h3>
+            <h3 class="text-center mb-4" style="color: #000000">Registrar Vehículos</h3>
             <form name="frm1" action="#" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <div class="form-group col-md-6">

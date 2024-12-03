@@ -54,55 +54,94 @@ h1.emp {
 }
 </style>
 
+<?php 
+    include("controllers/cemple.php"); // Controlador para empleados
+    include("controllers/csoli.php"); // Controlador para solicitudes
+    include("controllers/cserv.php"); // Controlador para servicios
+?>
+<br>
+<br>
+<br>
 <div class="containeremp">
-        <h1.emp>Perfil de Empleado</h1.emp>
+    <h1 class="emp">Perfil de Empleado</h1>
 
+    <?php if ($dmOne): ?>
+        <!-- Aquí se muestra la información de un solo empleado -->
         <button class="accordion-emp">Detalles de Servicio</button>
         <div class="panel-emp">
             <div class="section-content">
-                <p><strong>Nombre:</strong> </p>
-                <p><strong>Fecha de Ingreso:</strong> </p>
-                <p><strong>Sucursal:</strong> </p>
+                <table border="0">
+                    <tr>
+                        <td><strong>Nombre:</strong></td>
+                        <td><?php echo $dmOne[0]['$nomemple']; ?></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Documento:</strong></td>
+                        <td><?php echo $dmOne[0]['ndocemple']; ?></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sucursal:</strong></td>
+                        <td><?php echo $dmOne[0]['direemple']; ?></td>
+                    </tr>
+                </table>
             </div>
         </div>
 
         <button class="accordion-emp">Detalles de Movimiento</button>
         <div class="panel-emp">
             <div class="section-content">
-                <p><strong>Sueldo Depositado:</strong> </p>
-                <button class="accordion-service-emp">Ultimo servicio realizado:</button>
-                <div class="panel-service">
-                    <p><strong>Detalles:</strong> </p>
-                    <p><strong>Cliente:</strong> </p>
-                    <p><strong>Monto:</strong> </p>
-                </div>
+                <table border="0">
+                    <tr>
+                        <td><strong>Último servicio realizado:</strong></td>
+                        <td><?php echo $dmOne[0][' '];  ?></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Detalles:</strong></td>
+                        <td><?php echo $dmOne[0]['detsoli']; ?></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cliente:</strong></td>
+                        <td><?php echo $dmOne[0]['idclien'];  ?></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Monto:</strong></td>
+                        <td><?php echo $dmOne[0]['precio'];  ?></td>
+                    </tr>
+                </table>
             </div>
         </div>
-    </div>
+    <?php else: ?>
+        <p>No se encontraron datos para este empleado.</p>
+    <?php endif; ?>
+</div>
 
     <script>
-        var acc = document.getElementsByClassName("accordion-emp");
-        for (var i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
+        // Manejo de los botones principales (Detalles de Servicio y Detalles de Movimiento)
+var acc = document.getElementsByClassName("accordion-emp");
+for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
         }
-        var accService = document.getElementsByClassName("accordion-service-emp");
-        for (var i = 0; i < accService.length; i++) {
-            accService[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panelService = this.nextElementSibling;
-                if (panelService.style.maxHeight) {
-                    panelService.style.maxHeight = null;
-                } else {
-                    panelService.style.maxHeight = panelService.scrollHeight + "px";
-                }
-            });
+    });
+}
+
+// Manejo del botón "Último servicio realizado"
+var accService = document.getElementsByClassName("accordion-service-emp");
+for (var i = 0; i < accService.length; i++) {
+    accService[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panelService = this.nextElementSibling;
+        if (panelService.style.maxHeight) {
+            panelService.style.maxHeight = null;
+        } else {
+            panelService.style.maxHeight = panelService.scrollHeight + "px";
         }
+    });
+}
+
     </script>
