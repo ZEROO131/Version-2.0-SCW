@@ -14,6 +14,9 @@ CREATE TABLE `asignacion` (
   `idsoli` bigint(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+INSERT INTO `asignacion` (`idasig`, `idemple`, `idsoli`) VALUES
+(1, 1, 1);
+
 CREATE TABLE `detsoli` (
   `iddetsoli` bigint(10) NOT NULL,
   `idsoli` bigint(10) DEFAULT NULL,
@@ -69,12 +72,12 @@ CREATE TABLE `pagina` (
 
 INSERT INTO `pagina` (`idpag`, `titupag`, `nompag`, `rutpag`, `mospag`, `ordpag`, `icopag`, `despag`) VALUES
 (1001, 'Inicio', 'Inicio', 'views/vusuini.php', 1, 1, 'home-outline', ''),
-(1002, 'Datos personales', 'Datos personales', 'views/vusuinf.php', 1, 1, 'id-card', ''),
-(2001, '', 'homeemp', 'views/viniemp.php', 1, 1, 'home-outline', ''),
-(2002, '', 'vseremp', 'views/vseremp.php', 1, 1, '', ''),
-(2003, '', 'vrevehi', 'views/vrevehi.php', 1, 1, '', ''),
-(2004, '', 'vassoli', 'views/vassoli.php', 1, 1, '', ''),
-(2005, '', 'vhisser', 'views/vhisser.php', 1, 1, '', ''),
+(1002, 'Datos personales', 'Datos personales', 'views/vusuinf.php', 1, 2, 'id-card', ''),
+(2001, 'Inicio', 'Inicio', 'views/viniemp.php', 1, 1, 'home-outline', ''),
+(2002, 'Crear servicios / empleados', 'Crear servicios / empleados', 'views/vseremp.php', 1, 2, 'duplicate-outline', ''),
+(2003, 'Registrar vehiculo', 'Registrar vehículo\n', 'views/vrevehi.php', 1, 3, 'car-sport-outline', ''),
+(2004, 'Solicitudes y asignación ', 'Solicitudes y asignación\n', 'views/vassoli.php', 1, 4, 'grid-outline', ''),
+(2005, 'Historial de servicios', 'Historial de servicios', 'views/vhisser.php', 1, 5, 'reader-outline', ''),
 (3001, 'Inicio', 'Inicio', 'views/vemple.php', 1, 1, 'hammer-outline', '');
 
 CREATE TABLE `perfil` (
@@ -127,7 +130,7 @@ CREATE TABLE `solicitud` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `solicitud` (`idsoli`, `fecha`, `estasoli`, `idvehi`, `idusu`, `idempre`, `etasol`) VALUES
-(1, '2024-11-23', '1', 1, 1, 1, 3);
+(1, '2024-11-23', '1', 1, 1, 1, 1);
 
 CREATE TABLE `ubicacion` (
   `codubi` bigint(10) NOT NULL,
@@ -153,7 +156,7 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` (`idusu`, `nomusu`, `apeusu`, `emailusu`, `paswusu`, `tipdocusu`, `ndocusu`, `telusu`, `codubi`, `idper`, `imgusu`) VALUES
 (1, 'Juan', 'Sanchez', 'juansanchez131jd@gmail.com', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 1011322322, 3227254108, NULL, 1, ''),
 (2, 'Laura', 'alarcon', 'lau@gmail.com', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 123456789, 3214567899, NULL, 2, NULL),
-(3, 'Deivi Jesus', 'Ojeda Vivanco ', 'ojedavivanco@gmail.com', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 5558892, 3214569877, NULL, 3, NULL),
+(3, 'Deivi Jesus', 'Ojeda Vivanco ', 'deivi@gmail.com', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 5558892, 3214569877, NULL, 3, NULL),
 (4, 'Juan', 'Pinilla', '2', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 1011, 322, NULL, 2, NULL),
 (5, 'Juan', 'David', '3', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 10111, 3222, NULL, 3, NULL);
 
@@ -245,7 +248,7 @@ ALTER TABLE `vehiculo`
 
 
 ALTER TABLE `asignacion`
-  MODIFY `idasig` bigint(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idasig` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 ALTER TABLE `detsoli`
   MODIFY `iddetsoli` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
