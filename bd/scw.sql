@@ -1,4 +1,5 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -67,9 +68,14 @@ CREATE TABLE `pagina` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `pagina` (`idpag`, `titupag`, `nompag`, `rutpag`, `mospag`, `ordpag`, `icopag`, `despag`) VALUES
-(1001, 'Inicio', 'Inicio', 'views/vusuini.php', 1, 1, 'person-circle-outline', ''),
-(2001, '', 'homeemp', '', 0, 0, '', ''),
-(3001, '', 'homempl', '', 0, 0, '', '');
+(1001, 'Inicio', 'Inicio', 'views/vusuini.php', 1, 1, 'home-outline', ''),
+(1002, 'Datos personales', 'Datos personales', 'views/vusuinf.php', 1, 1, 'id-card', ''),
+(2001, '', 'homeemp', 'views/viniemp.php', 1, 1, 'home-outline', ''),
+(2002, '', 'vseremp', 'views/vseremp.php', 1, 1, '', ''),
+(2003, '', 'vrevehi', 'views/vrevehi.php', 1, 1, '', ''),
+(2004, '', 'vassoli', 'views/vassoli.php', 1, 1, '', ''),
+(2005, '', 'vhisser', 'views/vhisser.php', 1, 1, '', ''),
+(3001, 'Inicio', 'Inicio', 'views/vemple.php', 1, 1, 'hammer-outline', '');
 
 CREATE TABLE `perfil` (
   `idper` bigint(10) NOT NULL,
@@ -91,7 +97,12 @@ CREATE TABLE `perxpag` (
 INSERT INTO `perxpag` (`idperpag`, `idpag`, `idper`) VALUES
 (1, 1001, 1),
 (2, 2001, 2),
-(3, 3001, 3);
+(3, 3001, 3),
+(4, 1002, 1),
+(5, 2002, 2),
+(6, 2003, 2),
+(7, 2004, 2),
+(8, 2005, 2);
 
 CREATE TABLE `servicios` (
   `idservi` bigint(10) NOT NULL,
@@ -111,11 +122,12 @@ CREATE TABLE `solicitud` (
   `estasoli` varchar(255) DEFAULT NULL,
   `idvehi` bigint(10) DEFAULT NULL,
   `idusu` bigint(10) DEFAULT NULL,
-  `idempre` bigint(10) DEFAULT NULL
+  `idempre` bigint(10) DEFAULT NULL,
+  `etasol` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO `solicitud` (`idsoli`, `fecha`, `estasoli`, `idvehi`, `idusu`, `idempre`) VALUES
-(1, '2024-11-23', '', 1, 1, 1);
+INSERT INTO `solicitud` (`idsoli`, `fecha`, `estasoli`, `idvehi`, `idusu`, `idempre`, `etasol`) VALUES
+(1, '2024-11-23', '1', 1, 1, 1, 3);
 
 CREATE TABLE `ubicacion` (
   `codubi` bigint(10) NOT NULL,
@@ -134,16 +146,16 @@ CREATE TABLE `usuario` (
   `ndocusu` bigint(10) DEFAULT NULL,
   `telusu` bigint(11) DEFAULT NULL,
   `codubi` bigint(10) DEFAULT NULL,
-  `idper` bigint(10) DEFAULT NULL
+  `idper` bigint(10) DEFAULT NULL,
+  `imgusu` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO `usuario` (`idusu`, `nomusu`, `apeusu`, `emailusu`, `paswusu`, `tipdocusu`, `ndocusu`, `telusu`, `codubi`, `idper`) VALUES
-(1, 'Juan', 'Sanchez', 'juansanchez131jd@gmail.com', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 1011322322, 3227254108, NULL, 1),
-(2, 'Jhojan Esteban', 'Cancelado', 'Esteban@gmail.com', '123456', 'CC', 123456789, 3214567899, NULL, 2),
-(3, 'Deivi Jesus', 'Ojeda Vivanco ', 'ojedavivanco@gmail.com', '123456789', 'CC', 5558892, 3214569877, NULL, 3),
-(4, 'Juan', 'Pinilla', '2', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 1011, 322, NULL, 2),
-(5, 'Juan', 'David', '3', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 10111, 3222, NULL, 3),
-(10, 'Dilan', 'gei', '1010', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 101010, 32222, NULL, 1);
+INSERT INTO `usuario` (`idusu`, `nomusu`, `apeusu`, `emailusu`, `paswusu`, `tipdocusu`, `ndocusu`, `telusu`, `codubi`, `idper`, `imgusu`) VALUES
+(1, 'Juan', 'Sanchez', 'juansanchez131jd@gmail.com', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 1011322322, 3227254108, NULL, 1, ''),
+(2, 'Laura', 'alarcon', 'lau@gmail.com', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 123456789, 3214567899, NULL, 2, NULL),
+(3, 'Deivi Jesus', 'Ojeda Vivanco ', 'ojedavivanco@gmail.com', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 5558892, 3214569877, NULL, 3, NULL),
+(4, 'Juan', 'Pinilla', '2', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 1011, 322, NULL, 2, NULL),
+(5, 'Juan', 'David', '3', '7519304741a0ee4f24275772d261997179376a4a', 'CC', 10111, 3222, NULL, 3, NULL);
 
 CREATE TABLE `valor` (
   `idval` bigint(10) NOT NULL,
@@ -254,7 +266,7 @@ ALTER TABLE `perfil`
   MODIFY `idper` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 ALTER TABLE `perxpag`
-  MODIFY `idperpag` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idperpag` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 ALTER TABLE `servicios`
   MODIFY `idservi` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
@@ -266,7 +278,7 @@ ALTER TABLE `ubicacion`
   MODIFY `codubi` bigint(10) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `usuario`
-  MODIFY `idusu` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idusu` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 ALTER TABLE `valor`
   MODIFY `idval` bigint(10) NOT NULL AUTO_INCREMENT;
@@ -311,6 +323,7 @@ ALTER TABLE `valor`
 
 ALTER TABLE `vehiculo`
   ADD CONSTRAINT `vehiculo_ibfk_1` FOREIGN KEY (`idusu`) REFERENCES `usuario` (`idusu`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
