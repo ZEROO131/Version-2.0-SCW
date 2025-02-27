@@ -1,5 +1,5 @@
 <?php
-require_once('models/control.php'); // ✅ RUTA FIJA// Ahora se conecta directamente al controlador
+require_once(__DIR__ . '/../models/control.php');// ✅ RUTA FIJA// Ahora se conecta directamente al controlador
 
 // Verificar si se envió el formulario de recuperación
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
         <h2>Recuperar Contraseña</h2>
         <p>Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
         
-        <form action="models/control.php" method="POST">
+        <form action="../models/control.php" method="POST">
             <input type="hidden" name="accion" value="recuperar">
             <label for="email">Correo Electrónico:</label>
             <input type="email" name="email" required>
