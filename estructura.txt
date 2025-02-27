@@ -1,0 +1,1060 @@
+Listado de rutas de carpetas
+El número de serie del volumen es 52F8-999E
+C:.
+¦   composer.json
+¦   composer.lock
+¦   estructura.txt
+¦   home.php
+¦   index.php
+¦   
++---.git
+¦   ¦   COMMIT_EDITMSG
+¦   ¦   config
+¦   ¦   description
+¦   ¦   FETCH_HEAD
+¦   ¦   HEAD
+¦   ¦   index
+¦   ¦   ORIG_HEAD
+¦   ¦   
+¦   +---hooks
+¦   ¦       applypatch-msg.sample
+¦   ¦       commit-msg.sample
+¦   ¦       fsmonitor-watchman.sample
+¦   ¦       post-update.sample
+¦   ¦       pre-applypatch.sample
+¦   ¦       pre-commit.sample
+¦   ¦       pre-merge-commit.sample
+¦   ¦       pre-push.sample
+¦   ¦       pre-rebase.sample
+¦   ¦       pre-receive.sample
+¦   ¦       prepare-commit-msg.sample
+¦   ¦       push-to-checkout.sample
+¦   ¦       sendemail-validate.sample
+¦   ¦       update.sample
+¦   ¦       
+¦   +---info
+¦   ¦       exclude
+¦   ¦       
+¦   +---logs
+¦   ¦   ¦   HEAD
+¦   ¦   ¦   
+¦   ¦   +---refs
+¦   ¦       +---heads
+¦   ¦       ¦       main
+¦   ¦       ¦       
+¦   ¦       +---remotes
+¦   ¦           +---origin
+¦   ¦                   main
+¦   ¦                   
+¦   +---objects
+¦   ¦   +---00
+¦   ¦   ¦       ea02657d3cd1c6e1d14e96cdd28173ea8fd94e
+¦   ¦   ¦       
+¦   ¦   +---01
+¦   ¦   ¦       adecfcbb8625996d7160f59afa93f2fe68b92c
+¦   ¦   ¦       
+¦   ¦   +---03
+¦   ¦   ¦       0a8494dfff5f815d8229ca86b165cae25065ae
+¦   ¦   ¦       
+¦   ¦   +---04
+¦   ¦   ¦       e9185bd638bb11ef576be7b8439f2a7bdcb05e
+¦   ¦   ¦       
+¦   ¦   +---05
+¦   ¦   ¦       19ecba6ea913e21689ec692e81e9e4973fbf73
+¦   ¦   ¦       
+¦   ¦   +---06
+¦   ¦   ¦       b69e80a6efe6a6b6f0a784e8f4d404a85a478e
+¦   ¦   ¦       
+¦   ¦   +---07
+¦   ¦   ¦       d30d8fca549bb886a756ba0d1fa0753f5e31e7
+¦   ¦   ¦       
+¦   ¦   +---09
+¦   ¦   ¦       8f95784f5bef9e463fbd7cf622c827e48c6109
+¦   ¦   ¦       
+¦   ¦   +---0a
+¦   ¦   ¦       a9bd3beaf9a2e9f7f9ae736bd9bd9ffa14bb23
+¦   ¦   ¦       e29817e45c1bf9c32f43e457616c41c1381a7d
+¦   ¦   ¦       
+¦   ¦   +---0b
+¦   ¦   ¦       916c91a5a4c74381325094d5a4a671c7f6635e
+¦   ¦   ¦       9637c727c67f1529e482acf0d47694b65db1d9
+¦   ¦   ¦       
+¦   ¦   +---0c
+¦   ¦   ¦       53142f8ae1fc47ee003f8d08d2810173136fd1
+¦   ¦   ¦       
+¦   ¦   +---0f
+¦   ¦   ¦       b0a2c194b8590999a5ed79e357d4a9c1e9d8b8
+¦   ¦   ¦       
+¦   ¦   +---11
+¦   ¦   ¦       7370410ed63c1d289ac2902d30336b7addab6d
+¦   ¦   ¦       
+¦   ¦   +---14
+¦   ¦   ¦       5aaa7bfa760ba9e0cc1cf0d73f053485079a48
+¦   ¦   ¦       
+¦   ¦   +---15
+¦   ¦   ¦       a2ff3ad6d8d6ea2b6b1f9552c62d745ffc9bf4
+¦   ¦   ¦       
+¦   ¦   +---18
+¦   ¦   ¦       12a732ba529b63ec04b38c2638670bc64b4352
+¦   ¦   ¦       5db8948b82cbed85d515d788abc9f62675ca0f
+¦   ¦   ¦       66040fcda22a37d629de47d839b4af7a307804
+¦   ¦   ¦       c292134685235ddd1f25e6bd8753bfbab94774
+¦   ¦   ¦       
+¦   ¦   +---1a
+¦   ¦   ¦       0f824b1f2ab508917826f56cb82d9ef95769f4
+¦   ¦   ¦       110981162cc70cf16fc331b6564bf1001eef89
+¦   ¦   ¦       5d65630b24445eadf1a660c18fdbb187031c68
+¦   ¦   ¦       
+¦   ¦   +---1b
+¦   ¦   ¦       53a2e60d067ed2967656f8b8b75d63c0c82a6f
+¦   ¦   ¦       85e8b839cae941c4a580d5f703aa48bd27a4a0
+¦   ¦   ¦       d23b50a2ef21909c36b54eefa57bfd44bf700c
+¦   ¦   ¦       f77232192753f60653ff5bf88d524c52f1f68c
+¦   ¦   ¦       
+¦   ¦   +---1c
+¦   ¦   ¦       5d10608fc386516c145271caac8f2e45b05302
+¦   ¦   ¦       926af57ec9afa95b50095264c9e02e52f601d4
+¦   ¦   ¦       b8b441d48f1ba641b14a74a68e3a07725726fb
+¦   ¦   ¦       f51f05e0bea54e5893facf5d95a42b9aef6de1
+¦   ¦   ¦       
+¦   ¦   +---21
+¦   ¦   ¦       03919f4cb49080fc85bd7ed153b44e6f779bef
+¦   ¦   ¦       
+¦   ¦   +---23
+¦   ¦   ¦       00e298e748404294a0d012349ec44f3a411b86
+¦   ¦   ¦       7bec71a1dec5cba7c4b0dca388069f06c8bff2
+¦   ¦   ¦       9f25960d36a1d08f48c3595a82fa18f45ec5f3
+¦   ¦   ¦       
+¦   ¦   +---25
+¦   ¦   ¦       e04b53bcab84447ad3558d9b1f1e5863124adb
+¦   ¦   ¦       
+¦   ¦   +---26
+¦   ¦   ¦       0be28c1c98acae76da10a6822b8eb0ca1e417f
+¦   ¦   ¦       30ebf8b47747e3121b46985c07c6e29988ba61
+¦   ¦   ¦       
+¦   ¦   +---27
+¦   ¦   ¦       69d2ad17aa4a19fd74732b67851a8e491619ef
+¦   ¦   ¦       ba01e902b569d7f94ece7d48055a8436ff2603
+¦   ¦   ¦       
+¦   ¦   +---28
+¦   ¦   ¦       1e28628e7840f103b3161d4a7b3c500ae0814b
+¦   ¦   ¦       567a00f3dc72b2d9a72721eff4ab760fd4ae96
+¦   ¦   ¦       77b9d1ad419d628ec5dcbe4aa05577442c7a9c
+¦   ¦   ¦       
+¦   ¦   +---29
+¦   ¦   ¦       1a129de42bceafba4b09694fc20d2189e79027
+¦   ¦   ¦       7faadac2b6bb52be6574414456013b3934cbe7
+¦   ¦   ¦       d75fc6dec80f717d649d33289811cc41d0728c
+¦   ¦   ¦       
+¦   ¦   +---2b
+¦   ¦   ¦       27f6d0f9d83cb542c62dc3bc43dbf649a7f5ca
+¦   ¦   ¦       58b69da9efa4fdb5faa8f6518052a2e1c4d5e1
+¦   ¦   ¦       
+¦   ¦   +---2c
+¦   ¦   ¦       7677718f8c2bf69816b16f1c1baa75e4ee64da
+¦   ¦   ¦       
+¦   ¦   +---2d
+¦   ¦   ¦       71422372e74337f039c2d55d303b32d2211920
+¦   ¦   ¦       7eee2f430989c287ff03f74a455faf707458af
+¦   ¦   ¦       
+¦   ¦   +---2e
+¦   ¦   ¦       7ce4ba7253de3eb38d875a69bf757b6c2261ce
+¦   ¦   ¦       d9da1afec818ba7c4a955b204ec707da4d933e
+¦   ¦   ¦       
+¦   ¦   +---2f
+¦   ¦   ¦       60f980b48eaac1c1d77bf7ebcdaeb33b0db33f
+¦   ¦   ¦       af19888d690c9130a9add84af4e8cd180bf417
+¦   ¦   ¦       d565d77ddb88318a0b158b4f0e75a368b51740
+¦   ¦   ¦       
+¦   ¦   +---30
+¦   ¦   ¦       4dfc63c24b9479fa27be1789e2d37fa7aebd6d
+¦   ¦   ¦       823074ffc5a2fd3b94f0e39b16e200c5a1a033
+¦   ¦   ¦       
+¦   ¦   +---31
+¦   ¦   ¦       c8d2542df839050d8b19670950e25ee90c0e3b
+¦   ¦   ¦       
+¦   ¦   +---32
+¦   ¦   ¦       4a9d4f7a1c5baa6e3ba28af6fd36b9db99ab57
+¦   ¦   ¦       
+¦   ¦   +---33
+¦   ¦   ¦       2bbb49e575b3ac220356a41fc0bbf910f7f3a5
+¦   ¦   ¦       9555e095c2cb1c0369092c9051af5a56841206
+¦   ¦   ¦       
+¦   ¦   +---34
+¦   ¦   ¦       041a9464281a731274a21a6313495c773b483f
+¦   ¦   ¦       2ba54b5634a6cf87ea622eb68c6018b15d4f0b
+¦   ¦   ¦       9fa687d359e8a986dabed90a5132098311186f
+¦   ¦   ¦       a6d2a14de8e886e38b0cf4c66d8ff06a8a09b8
+¦   ¦   ¦       b8d9d12c461b7bff18972dd83b6fb4d469480b
+¦   ¦   ¦       
+¦   ¦   +---35
+¦   ¦   ¦       ae0bcea347ff0dea720cdc10e8e2bb0ec52a63
+¦   ¦   ¦       f34912f747f2b57104bf284abe2f72c4c034da
+¦   ¦   ¦       
+¦   ¦   +---37
+¦   ¦   ¦       35ff5a45ed4272279342d547187a007b100cc0
+¦   ¦   ¦       
+¦   ¦   +---38
+¦   ¦   ¦       82a8199be0701199474e2d943eef33e52a39ed
+¦   ¦   ¦       ece0bac80d2fe3842d181d0fb7115d9a86ca2e
+¦   ¦   ¦       
+¦   ¦   +---39
+¦   ¦   ¦       49d7cc86d9500286817039af683b238664de67
+¦   ¦   ¦       934146ffdc3af1e17b83657576b2d21f3cbecd
+¦   ¦   ¦       
+¦   ¦   +---3b
+¦   ¦   ¦       e240d970c4d0e62c35970d60834abbaf6c2db0
+¦   ¦   ¦       
+¦   ¦   +---3d
+¦   ¦   ¦       57ddc41729bf077564d66651e74c8dc95e3ec1
+¦   ¦   ¦       98c3d828a83433a207b8b27d751fbd762a80de
+¦   ¦   ¦       
+¦   ¦   +---3e
+¦   ¦   ¦       3fb7c2a246d7e1b41e663c87f7f3b4f419e749
+¦   ¦   ¦       4a515e5c6674fb20d526bc77041c5ad85de7a3
+¦   ¦   ¦       
+¦   ¦   +---3f
+¦   ¦   ¦       4de4a48d794cfe90a458b892d005db08710667
+¦   ¦   ¦       6e0cd64f5b679fa00a348ba2f7dc6c17059873
+¦   ¦   ¦       c4cc685c0c5fcc86b58e6a53fecc6ba32df9bd
+¦   ¦   ¦       
+¦   ¦   +---40
+¦   ¦   ¦       e31be1d7e1bac36a3bf25a2bddcdc964e3b3ef
+¦   ¦   ¦       
+¦   ¦   +---41
+¦   ¦   ¦       45bfeb46f46910f2f075884a2f3de5963d7eb9
+¦   ¦   ¦       d4357a317438f04033183da8a3dfe8193f0a45
+¦   ¦   ¦       
+¦   ¦   +---43
+¦   ¦   ¦       083dd06bec4c5e9bf6165b57131385573b3abe
+¦   ¦   ¦       deb799a30fc88dab3b1791ee4ab02766907ba8
+¦   ¦   ¦       
+¦   ¦   +---44
+¦   ¦   ¦       44b8dd4e469c2aef8a2cd82ddb6b664be5ea4d
+¦   ¦   ¦       
+¦   ¦   +---45
+¦   ¦   ¦       0b926622d13585005727245f513de49f2c7f14
+¦   ¦   ¦       4eefd6885661cbe529cdf7113268a6af1e3140
+¦   ¦   ¦       8cb72ade0bdf8afcdfcf297e0fd93a5b829d90
+¦   ¦   ¦       
+¦   ¦   +---46
+¦   ¦   ¦       27c072824d69adc3428bd9b15e3c15c4291da9
+¦   ¦   ¦       5fcd2d0d5e92abc5601a09eb38b810633f8815
+¦   ¦   ¦       62c58b31fd509b8b62893feabad384b2b3ad5d
+¦   ¦   ¦       
+¦   ¦   +---47
+¦   ¦   ¦       116cd4b872d10085ffd989931d729a799a0517
+¦   ¦   ¦       
+¦   ¦   +---48
+¦   ¦   ¦       91e35c1d1772b9fc1efac33898622352b712cb
+¦   ¦   ¦       
+¦   ¦   +---49
+¦   ¦   ¦       b843b1947c3edbfd46010e7436d69a9d395a7c
+¦   ¦   ¦       
+¦   ¦   +---4a
+¦   ¦   ¦       8ebc388650c3a9fd4fb134b118f45d6afb4e88
+¦   ¦   ¦       e4a945efd5cfcf26fcf61da2436b548b56dbc1
+¦   ¦   ¦       
+¦   ¦   +---4b
+¦   ¦   ¦       f3c69bfd095cbe4f14764e6d1488eea723eff0
+¦   ¦   ¦       
+¦   ¦   +---4c
+¦   ¦   ¦       4287deb921afb65de2cb32bdd25c0f48c69fab
+¦   ¦   ¦       
+¦   ¦   +---4d
+¦   ¦   ¦       17a374daf867bdb6be948e5aa4ea14c40415d0
+¦   ¦   ¦       43715223124fe313a1884b0aced70e220f4442
+¦   ¦   ¦       d56060926697bfc6fbce7f7635c37cf43df77c
+¦   ¦   ¦       feb2c8f941f0a24f0ea3d8801538b7b813b9d4
+¦   ¦   ¦       
+¦   ¦   +---4e
+¦   ¦   ¦       4e4b92eb5aeb530ea96937137d1836a599ccfd
+¦   ¦   ¦       f3021ffb68e4a03ee5317a8d51148a43019f62
+¦   ¦   ¦       
+¦   ¦   +---4f
+¦   ¦   ¦       90b59451f8320ee013515b56d1f1ffa4a43d28
+¦   ¦   ¦       975176ffd5a6a3a486b9e95e3e0e1dce190325
+¦   ¦   ¦       
+¦   ¦   +---50
+¦   ¦   ¦       d34056b72a3a664a0055e5c7dcd9f2b6ef2b10
+¦   ¦   ¦       f2b5c971ca9e43cf3526037c7244d7800f3371
+¦   ¦   ¦       
+¦   ¦   +---51
+¦   ¦   ¦       15208328b0623e9125b9a7073ee77b1730cab4
+¦   ¦   ¦       
+¦   ¦   +---54
+¦   ¦   ¦       99a4808c051b28a5c3ba3a3570190e25e1f6ed
+¦   ¦   ¦       
+¦   ¦   +---55
+¦   ¦   ¦       30c7cb356b48f2aec6b051a5fa8366a688fbd9
+¦   ¦   ¦       3be6e51212488267acc7f537e87e936cd4537d
+¦   ¦   ¦       
+¦   ¦   +---56
+¦   ¦   ¦       b412def002b37597d7651118396975e6625006
+¦   ¦   ¦       
+¦   ¦   +---57
+¦   ¦   ¦       6cecc42e6ee4ba9af21fb1fe6a19473a734221
+¦   ¦   ¦       
+¦   ¦   +---59
+¦   ¦   ¦       75cdf9e7228b3a5d360e313171ba365508a034
+¦   ¦   ¦       
+¦   ¦   +---5a
+¦   ¦   ¦       3e2bae2ce2229a1e49ce0886e8869b182e9b3c
+¦   ¦   ¦       a0c64136469b0809416a18898c306ca653e92f
+¦   ¦   ¦       f9d51b8273b931ca7271ec2e01c27144d71e23
+¦   ¦   ¦       
+¦   ¦   +---5c
+¦   ¦   ¦       ac1297612952200fd80133c2b3131ce3d923c6
+¦   ¦   ¦       
+¦   ¦   +---5d
+¦   ¦   ¦       0ae7245dcd8c66cb1251a8eb4b0925f1ec87fb
+¦   ¦   ¦       fa423959d14a0f4d9904a9da858a2cdef7ca13
+¦   ¦   ¦       
+¦   ¦   +---5f
+¦   ¦   ¦       0443eb2c782cc3bb7ef14c65cb5c85190bbc7f
+¦   ¦   ¦       4aa6b8520025d2c08c3455587372f041bad36a
+¦   ¦   ¦       e522b6d709706ef19f5d48109926709cb87699
+¦   ¦   ¦       
+¦   ¦   +---61
+¦   ¦   ¦       c8f7c757f5bee428a7a0ed732993f80dc47b82
+¦   ¦   ¦       
+¦   ¦   +---62
+¦   ¦   ¦       51a3aa64d0bb6cec772d4da7e6a70e38cd8556
+¦   ¦   ¦       94dff3dfb3956b992065c7991d4083bc0b9d9b
+¦   ¦   ¦       
+¦   ¦   +---63
+¦   ¦   ¦       05410923d611e3165b5e1f7c2cf625723d76dc
+¦   ¦   ¦       
+¦   ¦   +---65
+¦   ¦   ¦       6e13c63b1b954d9d14eabdabba59d231788e02
+¦   ¦   ¦       75c380c28becdf9b63db5e3072f4703162bfdb
+¦   ¦   ¦       a45ba2b927370e110842b3f6864b8efeeddecd
+¦   ¦   ¦       
+¦   ¦   +---66
+¦   ¦   ¦       8724cadb94e4df52c6ffe61e277f3a2be177f4
+¦   ¦   ¦       e0bc9721e939c9a672e8dddedb0a66961e8a9f
+¦   ¦   ¦       e80a77445d8d9c71aef4098669f1e5c84b5e11
+¦   ¦   ¦       fffe1951543c0d6c23cc25a87269574c9e5264
+¦   ¦   ¦       
+¦   ¦   +---67
+¦   ¦   ¦       2cbc2e625faf2402462ab85409ea2791984964
+¦   ¦   ¦       38a9c946d00504a4284f12270d4b8c2661cd3a
+¦   ¦   ¦       f2952c900d5ff5265d6f8304e0b504327cc591
+¦   ¦   ¦       
+¦   ¦   +---68
+¦   ¦   ¦       1f25c4ab72d272fe06dbdcd678f65cd9a07dd2
+¦   ¦   ¦       399ac54a51dfd2924fb5cc2749a4736b700508
+¦   ¦   ¦       9b5b6b592e531e1330298ea4259644f0976f97
+¦   ¦   ¦       
+¦   ¦   +---69
+¦   ¦   ¦       440cc7e431ed5b6f2b1fadb8376f551551d30c
+¦   ¦   ¦       f71484adaa0a451aa2e59b97307a317dee33c1
+¦   ¦   ¦       
+¦   ¦   +---6a
+¦   ¦   ¦       63c55ef6d8a9340a24c0477d4c8419169c77c2
+¦   ¦   ¦       
+¦   ¦   +---6b
+¦   ¦   ¦       1359fee528e63f2b1bf6e4a2e5afa1c7281ef1
+¦   ¦   ¦       
+¦   ¦   +---6c
+¦   ¦   ¦       039140e0223befbdd0c26f3e9e87c0e7459798
+¦   ¦   ¦       b0b2c1d6ad79f8a122a4921d43b4e75ab12fd9
+¦   ¦   ¦       dd5b11b46f6148968167e7ff0e5c178384c89d
+¦   ¦   ¦       
+¦   ¦   +---6d
+¦   ¦   ¦       1cf4f19a978669ce6e6ec766df4174cf5c7602
+¦   ¦   ¦       29bff66aace8e892717577539275845aa38074
+¦   ¦   ¦       
+¦   ¦   +---70
+¦   ¦   ¦       3933c57dda7e04e1fc27c47141eccb798301ec
+¦   ¦   ¦       
+¦   ¦   +---71
+¦   ¦   ¦       133bd38bbe38cb3559d780df462fbed3d87d60
+¦   ¦   ¦       b2516accbeef4cdb50788e7e7b7f14de9e8874
+¦   ¦   ¦       
+¦   ¦   +---72
+¦   ¦   ¦       300d7a9ae388c9d672d2b8814a91b583299f42
+¦   ¦   ¦       
+¦   ¦   +---73
+¦   ¦   ¦       6bad61ab4d7789366ecf11c47f83e1fe6d7b50
+¦   ¦   ¦       
+¦   ¦   +---75
+¦   ¦   ¦       3823c2729a6f23a5a05c2121b2c39676c161e6
+¦   ¦   ¦       
+¦   ¦   +---76
+¦   ¦   ¦       41ef68b8080b9f7cdb836ddf01cedb702d1ff4
+¦   ¦   ¦       
+¦   ¦   +---77
+¦   ¦   ¦       c1a0efb803b6fed3ba6a8ec056322c1b7978f7
+¦   ¦   ¦       
+¦   ¦   +---78
+¦   ¦   ¦       2134c610710bfb0f2436e2729a9a1ef83473b0
+¦   ¦   ¦       24d8f7eafe8db890975f0fa2dfab31435900da
+¦   ¦   ¦       e52b21f010760eb2836b9d13177fa6d4dc96b5
+¦   ¦   ¦       
+¦   ¦   +---79
+¦   ¦   ¦       db49e1c71aa217d1622fa5885c3eb08d22cdea
+¦   ¦   ¦       
+¦   ¦   +---7a
+¦   ¦   ¦       5a5d35ac2b99a1097857512bead13b774cda30
+¦   ¦   ¦       
+¦   ¦   +---7d
+¦   ¦   ¦       5761b1c053c9deb134d7e0259b856c90d44bdb
+¦   ¦   ¦       7797544c3b4d2f0f597b3e198072ac58967c36
+¦   ¦   ¦       cc4bc8b15f12683bef965533139dc7642bdc9c
+¦   ¦   ¦       ded1c4e4902b7c88665c4825891af826e387a1
+¦   ¦   ¦       
+¦   ¦   +---7e
+¦   ¦   ¦       0d8eada8e6bc2c6ab9c82dab4ba9a58e915a09
+¦   ¦   ¦       
+¦   ¦   +---7f
+¦   ¦   ¦       21a23d5a6e3bc5215ca016fbbbb8b66ad3c35b
+¦   ¦   ¦       dc4f2f147fa14e0d1b4dd1e474d3065e6a96b1
+¦   ¦   ¦       
+¦   ¦   +---80
+¦   ¦   ¦       2b60d0a1e37b338b6ab25a37b7bd2546be27b0
+¦   ¦   ¦       
+¦   ¦   +---81
+¦   ¦   ¦       f8316f544e3d42d519780b7f28cd0741fb4a73
+¦   ¦   ¦       
+¦   ¦   +---82
+¦   ¦   ¦       8ec175f08f88fc079d2086599f70f754a72fc9
+¦   ¦   ¦       d23b95e806a5b4c44bb529454ce1e8b4d367b0
+¦   ¦   ¦       fe4ddf862bcf610acd09fc1a39b7a1307873d9
+¦   ¦   ¦       
+¦   ¦   +---83
+¦   ¦   ¦       a1f0d00416de721fc3d6b81d651c01ae787b9e
+¦   ¦   ¦       
+¦   ¦   +---84
+¦   ¦   ¦       52768fd0c3e0c2cb90fefdbd845149ea61acbf
+¦   ¦   ¦       
+¦   ¦   +---85
+¦   ¦   ¦       cb6266b11e22f6dbea5c17079d879929db8ccf
+¦   ¦   ¦       
+¦   ¦   +---87
+¦   ¦   ¦       2524089ce5f864238698ff7a622a4104bb5d9e
+¦   ¦   ¦       
+¦   ¦   +---88
+¦   ¦   ¦       c37b0d88c0553fcd6dce8bc1f159f25a21b3a3
+¦   ¦   ¦       
+¦   ¦   +---89
+¦   ¦   ¦       5016404a5a7b35490ab773a24a405a3a5646e0
+¦   ¦   ¦       ee4700969df614e30519bdba9ab44fbb504beb
+¦   ¦   ¦       
+¦   ¦   +---8a
+¦   ¦   ¦       58bb5d5b05cbdd8324d680bcca8490dca59a82
+¦   ¦   ¦       ce6e9e284a44222f286b4f760797c64b456a32
+¦   ¦   ¦       db286636a25a6f5764b96221c5e4f076c259bc
+¦   ¦   ¦       
+¦   ¦   +---8b
+¦   ¦   ¦       109974b88b1badb63e229d2075db8601cb9e83
+¦   ¦   ¦       f55731af22e9f04e02e4c8160a118472138e63
+¦   ¦   ¦       
+¦   ¦   +---8c
+¦   ¦   ¦       38db72cecdd51cbee934110b19ee249a004bc5
+¦   ¦   ¦       5c395700bcf6d5a0aeb64cd63db47f82d787dd
+¦   ¦   ¦       83b36f8e0a639495f4a5cdb482cccf11026e85
+¦   ¦   ¦       
+¦   ¦   +---8d
+¦   ¦   ¦       f43cfcc3f0552c7ff49269dba8b94834406044
+¦   ¦   ¦       
+¦   ¦   +---90
+¦   ¦   ¦       ce798738d86c6e2f6736ef86896abe542eee7e
+¦   ¦   ¦       fc5481ae80870c9a9ca728ed4e388f40dbdbd4
+¦   ¦   ¦       
+¦   ¦   +---91
+¦   ¦   ¦       3b364131d711c72288fb96924be74d86a69524
+¦   ¦   ¦       90ecfcacf4af749cdf6603a6ebad5d367c988c
+¦   ¦   ¦       
+¦   ¦   +---96
+¦   ¦   ¦       3fcc88d87033cdd7a185dfca84c30f70800b41
+¦   ¦   ¦       
+¦   ¦   +---98
+¦   ¦   ¦       a87052b8cb57d159dc8b342ae1e3d527dfcece
+¦   ¦   ¦       
+¦   ¦   +---99
+¦   ¦   ¦       3386559d1793c43b60c37d630273cb5dc5e781
+¦   ¦   ¦       8aca2f0e1752accabc5d8def8a62ca00c6c3b3
+¦   ¦   ¦       
+¦   ¦   +---9b
+¦   ¦   ¦       3986e12cc72504bf66d9b8a3f8dce8fd6d7d83
+¦   ¦   ¦       
+¦   ¦   +---9c
+¦   ¦   ¦       566306d4e0951c654aa94c1c3b9f76250ccf14
+¦   ¦   ¦       
+¦   ¦   +---9d
+¦   ¦   ¦       e25bb9b00854030f5f214aedad7c7577b799ec
+¦   ¦   ¦       
+¦   ¦   +---9e
+¦   ¦   ¦       6eb4656e802ba5acf65ed886bc8243489465bc
+¦   ¦   ¦       f34bc950f6d817328e628e0744827068502c35
+¦   ¦   ¦       
+¦   ¦   +---9f
+¦   ¦   ¦       75281f16f79652695bedb57b94e1543f50c52c
+¦   ¦   ¦       d3e1272586bac3608607feaeb509e9ff94c055
+¦   ¦   ¦       e126944f8d81342fd49393bacc03c67061b24e
+¦   ¦   ¦       
+¦   ¦   +---a0
+¦   ¦   ¦       cba4dcefd1c40b31328934993545c126a6a3a5
+¦   ¦   ¦       db8b57a8db611e11a939692cda8f2685d889a3
+¦   ¦   ¦       
+¦   ¦   +---a1
+¦   ¦   ¦       f9a1891ab1dca45f80a7dd35c53af94087aef1
+¦   ¦   ¦       fdbf7ac54248f4dfd83fce3e372bdbc9df2e94
+¦   ¦   ¦       
+¦   ¦   +---a2
+¦   ¦   ¦       af00ca08802b5b1e8fdbe02d5d7cedccb3e1d8
+¦   ¦   ¦       c3e6004a4cc14e8908446fb3640ab6484af58b
+¦   ¦   ¦       
+¦   ¦   +---a4
+¦   ¦   ¦       59b9c6137ca53c269c36806feb84b25fb333a8
+¦   ¦   ¦       9a8eb99951c10424030450b46ef4b78fbb6338
+¦   ¦   ¦       
+¦   ¦   +---a5
+¦   ¦   ¦       7069d9ddefec729e077ef3abf08a9ea39168a3
+¦   ¦   ¦       
+¦   ¦   +---a7
+¦   ¦   ¦       7bdfb00e5937b85bd38821e1e4c16af0fa7124
+¦   ¦   ¦       f7a66e8e0a6fb4a2949f1d8fb8367b1c9a5ceb
+¦   ¦   ¦       
+¦   ¦   +---a8
+¦   ¦   ¦       38d00863ce6c9dc8a994beb88347693e240dc1
+¦   ¦   ¦       
+¦   ¦   +---aa
+¦   ¦   ¦       8035949c6988bca5ef2eb24b4a9dff59441e78
+¦   ¦   ¦       a63792780594bf3fcbe47ad6590a18d714a404
+¦   ¦   ¦       
+¦   ¦   +---ab
+¦   ¦   ¦       81f343a791a15c677fe0e58e193ee265b16d40
+¦   ¦   ¦       a8106c2a04a1cdedfa4446afd8db92ccf28edf
+¦   ¦   ¦       d6ac4c4e2e06d58b9fea4bb29bb098dbf19b29
+¦   ¦   ¦       e126e0e9133649191ebda5960bfa5053221401
+¦   ¦   ¦       
+¦   ¦   +---ad
+¦   ¦   ¦       e381ec4b9bddac19e7b071c6cb84185844389c
+¦   ¦   ¦       
+¦   ¦   +---af
+¦   ¦   ¦       0d38fe646d9fc76ad529f9f143330b70c17189
+¦   ¦   ¦       fd6dfa74e8f37f59c2bcd1b25c066c31dfea8e
+¦   ¦   ¦       
+¦   ¦   +---b0
+¦   ¦   ¦       9b531163396939b04f7bfd8859181c8572f7ce
+¦   ¦   ¦       abe89269ee6a6222d52c35642a70057133eeb3
+¦   ¦   ¦       fa4187147ec8760f712b4abbec4376c720b02e
+¦   ¦   ¦       
+¦   ¦   +---b1
+¦   ¦   ¦       da1a5ac85d70c10b4c6cf443043720b5efea05
+¦   ¦   ¦       
+¦   ¦   +---b2
+¦   ¦   ¦       296725a0fb7f9401e17550dbe733f090683864
+¦   ¦   ¦       
+¦   ¦   +---b3
+¦   ¦   ¦       8163d02d73a1a60b3440361faabeee2963fb30
+¦   ¦   ¦       
+¦   ¦   +---b6
+¦   ¦   ¦       d42845153dfe760587f5d4cc7fb4ccc844ccb4
+¦   ¦   ¦       
+¦   ¦   +---b7
+¦   ¦   ¦       ab57f2adb13f01d8ebbb1c37f022494db7e0c0
+¦   ¦   ¦       
+¦   ¦   +---b8
+¦   ¦   ¦       83d8efae2e44e3d4923a1396cd08a83f015b38
+¦   ¦   ¦       
+¦   ¦   +---b9
+¦   ¦   ¦       00671348c0072aa4781daa4ccbd2f319ce131c
+¦   ¦   ¦       14789f1841478310c62a56390155a4b65416e1
+¦   ¦   ¦       ad083bb6543108a7e3e03f12cdd45d86863d8a
+¦   ¦   ¦       fe26129f803eca3b480abd5972bc082970fe8a
+¦   ¦   ¦       
+¦   ¦   +---ba
+¦   ¦   ¦       97f8e758cd7441a7ae7afac91d68a4c5870a47
+¦   ¦   ¦       
+¦   ¦   +---bb
+¦   ¦   ¦       11182692646361c8866451c23bd40a2b4d184c
+¦   ¦   ¦       97c0083c9ac21fa6d06e3321257bdfe2fef65e
+¦   ¦   ¦       
+¦   ¦   +---bd
+¦   ¦   ¦       1e4c963eda6d4933e073b087db83971af8794b
+¦   ¦   ¦       37481446315229add5b65865d523dd4082b7df
+¦   ¦   ¦       
+¦   ¦   +---be
+¦   ¦   ¦       8f792944c62c3f74b982774b2eaafaac766ae8
+¦   ¦   ¦       
+¦   ¦   +---bf
+¦   ¦   ¦       dda7e11ddf8535bc1620a5c8672421b8830c5d
+¦   ¦   ¦       
+¦   ¦   +---c0
+¦   ¦   ¦       1c50fddcdfe695a4a1fe30e574056c45bd3fe8
+¦   ¦   ¦       
+¦   ¦   +---c3
+¦   ¦   ¦       1134ac84d3e173626baa360be52513b5962219
+¦   ¦   ¦       
+¦   ¦   +---c5
+¦   ¦   ¦       73a34463763631ad17e6eda0ccbdfa388a6789
+¦   ¦   ¦       
+¦   ¦   +---c6
+¦   ¦   ¦       885fd4e903dba8a2fc402831e915672d6fc7e5
+¦   ¦   ¦       cb9ee8565f7b2ad1e08f5eb6a35453878214ee
+¦   ¦   ¦       
+¦   ¦   +---c7
+¦   ¦   ¦       2b5fe526966e8c0d0017a50d37213ec953e246
+¦   ¦   ¦       9494443c7c0aadba9c19e6635d40bca5712647
+¦   ¦   ¦       
+¦   ¦   +---c8
+¦   ¦   ¦       04ebffdb99c7f35ed86aafecacd014be783566
+¦   ¦   ¦       b45a44bf3ba75485937fa06d64a6a8959cc756
+¦   ¦   ¦       
+¦   ¦   +---c9
+¦   ¦   ¦       931d2387072c3af25002e7f368ef5464c5badc
+¦   ¦   ¦       
+¦   ¦   +---ca
+¦   ¦   ¦       e17b105365a831b47f7e73aa56f0739249a487
+¦   ¦   ¦       
+¦   ¦   +---cc
+¦   ¦   ¦       bce107361afa0bf21ac741426005c21c8793a4
+¦   ¦   ¦       
+¦   ¦   +---cd
+¦   ¦   ¦       79e6750955f847d1fd12526723310241064355
+¦   ¦   ¦       
+¦   ¦   +---ce
+¦   ¦   ¦       99ec1966147d246588ebacb74ead3451318a7a
+¦   ¦   ¦       
+¦   ¦   +---cf
+¦   ¦   ¦       b93cd90800a4bf24c0e1d40bfa70c7ec87b4a2
+¦   ¦   ¦       
+¦   ¦   +---d0
+¦   ¦   ¦       1e6150bfd070b64a0ac389403efea389836218
+¦   ¦   ¦       30ea7195e1c8e654cf47ed32d524a3ba46f80d
+¦   ¦   ¦       eb6e573b0abc459e4f0698c280ea3813ff5788
+¦   ¦   ¦       
+¦   ¦   +---d1
+¦   ¦   ¦       1abc8f49dd15604678f06fb7d2e776113daffc
+¦   ¦   ¦       dafdc76439a29c04ac838e8e28f93e2f679e35
+¦   ¦   ¦       
+¦   ¦   +---d3
+¦   ¦   ¦       5c4fc9a2e9194609f155e9b96aa8136c68791b
+¦   ¦   ¦       
+¦   ¦   +---d4
+¦   ¦   ¦       a776b7cddce93d56220dde3e6a9029c9427df5
+¦   ¦   ¦       
+¦   ¦   +---d5
+¦   ¦   ¦       48f142f30b29d9ad22b76765abbe99e8cc78f6
+¦   ¦   ¦       5649874619c6821a8dc13f2be5492590d777c5
+¦   ¦   ¦       dc5ea1f632023ca90e6941452e30d003ad4dcb
+¦   ¦   ¦       
+¦   ¦   +---d7
+¦   ¦   ¦       2be451c7c157c9c7925d7a8981fba98dc89d0a
+¦   ¦   ¦       61033f46f454280551a29da9aa54fa90a5020b
+¦   ¦   ¦       
+¦   ¦   +---d8
+¦   ¦   ¦       58d610ef747340a3804d0ce1c6ac15525f3af7
+¦   ¦   ¦       
+¦   ¦   +---d9
+¦   ¦   ¦       346c23f92ff14aff52f67d9f0882ce68594e6f
+¦   ¦   ¦       
+¦   ¦   +---da
+¦   ¦   ¦       689d4365aa72e695ff9a67fa29eca23bac426a
+¦   ¦   ¦       
+¦   ¦   +---db
+¦   ¦   ¦       679f4e8e1e02058395f17a7db26a72315a723e
+¦   ¦   ¦       857d33f424da6715480c0df451ed5b2afd34ce
+¦   ¦   ¦       
+¦   ¦   +---de
+¦   ¦   ¦       b0ecce1759716611eec8188b4887497343bb3d
+¦   ¦   ¦       e79505bffc9067bdf17d52bff24670e3ce4b89
+¦   ¦   ¦       
+¦   ¦   +---df
+¦   ¦   ¦       e1946b3cf2a23e3a0fa2e24e4073d36076be2a
+¦   ¦   ¦       
+¦   ¦   +---e0
+¦   ¦   ¦       d1ad092e89343f2b9532145b18325d37ec721e
+¦   ¦   ¦       
+¦   ¦   +---e1
+¦   ¦   ¦       58188ef0734b44e25e7fd929c043b8e0b26c3b
+¦   ¦   ¦       
+¦   ¦   +---e3
+¦   ¦   ¦       17426abe0c558a193ea22ad124d547d44504b7
+¦   ¦   ¦       5a5eff1324e69438ed63785dad2d7cba19bc7d
+¦   ¦   ¦       7e7626a65c63a9a99a708e7504c20a94d9cb2e
+¦   ¦   ¦       a59e3a1c3cd659a3475fe4128e7da427c5c223
+¦   ¦   ¦       
+¦   ¦   +---e4
+¦   ¦   ¦       774804709fac4ef1307dbbbd37c7553407e0ed
+¦   ¦   ¦       b01dc63029ea3995c83858ed11643421ea74d3
+¦   ¦   ¦       
+¦   ¦   +---e6
+¦   ¦   ¦       9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+¦   ¦   ¦       
+¦   ¦   +---e7
+¦   ¦   ¦       24a9c5155d586d5810e3503b5c23e57a04d273
+¦   ¦   ¦       
+¦   ¦   +---e9
+¦   ¦   ¦       5724a202660e720bdf51ee2cfd8cfa7731d384
+¦   ¦   ¦       ec28dafd388b7abfd8c5ed46571bb7cd2275be
+¦   ¦   ¦       
+¦   ¦   +---ea
+¦   ¦   ¦       bd0b453af3ea5cc96fbcf2856f495d53e595c2
+¦   ¦   ¦       d3caa2f8f701672730b573f2a50b60dda7847a
+¦   ¦   ¦       
+¦   ¦   +---ed
+¦   ¦   ¦       39b5317100ec18ec572795cd35c1d4245aacb6
+¦   ¦   ¦       
+¦   ¦   +---ee
+¦   ¦   ¦       24b8fcd3ef760843fcd009bb29385a35b36966
+¦   ¦   ¦       42153a062e5f68e80c84f9fdee826703620753
+¦   ¦   ¦       
+¦   ¦   +---f1
+¦   ¦   ¦       0ffce16327a2e54c54b1650d3700fb70092a4c
+¦   ¦   ¦       
+¦   ¦   +---f2
+¦   ¦   ¦       70633470f10d25b1b62e0ebc1fa1d8a1e2cb5e
+¦   ¦   ¦       7399a042d95c4708af3a8c74d35d338763cf8f
+¦   ¦   ¦       
+¦   ¦   +---f5
+¦   ¦   ¦       729e856d971b23c3a64ad24e1dd4c383e75a63
+¦   ¦   ¦       d8d6ae77f8d3ea7271b26b9801126ae4d14291
+¦   ¦   ¦       
+¦   ¦   +---f8
+¦   ¦   ¦       5e8241935722916ca1e9fa7256ed24e59ead40
+¦   ¦   ¦       
+¦   ¦   +---f9
+¦   ¦   ¦       8ece790828241ebef9e3bd6dcf9ac126476d78
+¦   ¦   ¦       c0ae05003f5a9e4357ce23d3222c888a1961b5
+¦   ¦   ¦       
+¦   ¦   +---fc
+¦   ¦   ¦       1e15a984ff0fa0da1fce9e668a1b9d9920a436
+¦   ¦   ¦       
+¦   ¦   +---fd
+¦   ¦   ¦       24090fb85f4ce74e941d805d5f925fe4fcfa2f
+¦   ¦   ¦       5feb70818c59e9fe2f9d9a0a8c52c61644cb23
+¦   ¦   ¦       
+¦   ¦   +---fe
+¦   ¦   ¦       9e0a8f217aaf668ce0d9e7a9806db101176af1
+¦   ¦   ¦       
+¦   ¦   +---info
+¦   ¦   +---pack
+¦   +---refs
+¦       +---heads
+¦       ¦       main
+¦       ¦       
+¦       +---remotes
+¦       ¦   +---origin
+¦       ¦           main
+¦       ¦           
+¦       +---tags
++---bd
+¦       scw 2602.sql
+¦       scw.sql
+¦       
++---controllers
+¦       cassoli.php
+¦       cemple.php
+¦       ciniemp.php
+¦       cmenu.php
+¦       cserv.php
+¦       csoli.php
+¦       cusubar.php
+¦       cusuinf.php
+¦       cusuini.php
+¦       cusuiniser.php
+¦       enviar_correo.php
+¦       optimg.php
+¦       
++---css
+¦       login.css
+¦       style.css
+¦       
++---fotos
++---img
+¦       AUDI.png
+¦       audir.png
+¦       audi_a4.png
+¦       EXPLORER.png
+¦       ford_explorer.png
+¦       KIA.png
+¦       kia_stinger.png
+¦       LOGO.png
+¦       
++---js
+¦       main.js
+¦       
++---models
+¦       conexion.php
+¦       control.php
+¦       controlll.php
+¦       datos.php
+¦       massoli.php
+¦       memple.php
+¦       miniemp.php
+¦       mmenu.php
+¦       mserv.php
+¦       msoli.php
+¦       musubar.php
+¦       musuinf.php
+¦       musuini.php
+¦       musuiniser.php
+¦       seg.php
+¦       
++---vendor
+¦   ¦   autoload.php
+¦   ¦   
+¦   +---composer
+¦   ¦       autoload_classmap.php
+¦   ¦       autoload_namespaces.php
+¦   ¦       autoload_psr4.php
+¦   ¦       autoload_real.php
+¦   ¦       autoload_static.php
+¦   ¦       ClassLoader.php
+¦   ¦       installed.json
+¦   ¦       installed.php
+¦   ¦       InstalledVersions.php
+¦   ¦       LICENSE
+¦   ¦       platform_check.php
+¦   ¦       
+¦   +---phpmailer
+¦       +---phpmailer
+¦           ¦   .codecov.yml
+¦           ¦   .editorconfig
+¦           ¦   .gitattributes
+¦           ¦   .gitignore
+¦           ¦   changelog.md
+¦           ¦   COMMITMENT
+¦           ¦   composer.json
+¦           ¦   get_oauth_token.php
+¦           ¦   LICENSE
+¦           ¦   phpcs.xml.dist
+¦           ¦   phpdoc.dist.xml
+¦           ¦   phpunit.xml.dist
+¦           ¦   README.md
+¦           ¦   SECURITY.md
+¦           ¦   UPGRADING.md
+¦           ¦   VERSION
+¦           ¦   
+¦           +---.github
+¦           ¦   ¦   dependabot.yml
+¦           ¦   ¦   FUNDING.yml
+¦           ¦   ¦   
+¦           ¦   +---actions
+¦           ¦   ¦   +---build-docs
+¦           ¦   ¦           Dockerfile
+¦           ¦   ¦           entrypoint.sh
+¦           ¦   ¦           
+¦           ¦   +---ISSUE_TEMPLATE
+¦           ¦   ¦       bug_report.md
+¦           ¦   ¦       
+¦           ¦   +---workflows
+¦           ¦           docs.yaml
+¦           ¦           scorecards.yml
+¦           ¦           tests.yml
+¦           ¦           
+¦           +---.phan
+¦           ¦       config.php
+¦           ¦       
+¦           +---docs
+¦           ¦       README.md
+¦           ¦       
+¦           +---examples
+¦           ¦   ¦   azure_xoauth2.phps
+¦           ¦   ¦   callback.phps
+¦           ¦   ¦   contactform-ajax.phps
+¦           ¦   ¦   contactform.phps
+¦           ¦   ¦   contents.html
+¦           ¦   ¦   contentsutf8.html
+¦           ¦   ¦   DKIM_gen_keys.phps
+¦           ¦   ¦   DKIM_sign.phps
+¦           ¦   ¦   exceptions.phps
+¦           ¦   ¦   extending.phps
+¦           ¦   ¦   gmail.phps
+¦           ¦   ¦   gmail_xoauth.phps
+¦           ¦   ¦   mail.phps
+¦           ¦   ¦   mailing_list.phps
+¦           ¦   ¦   pop_before_smtp.phps
+¦           ¦   ¦   README.md
+¦           ¦   ¦   sendmail.phps
+¦           ¦   ¦   sendoauth2.phps
+¦           ¦   ¦   send_file_upload.phps
+¦           ¦   ¦   send_multiple_file_upload.phps
+¦           ¦   ¦   simple_contact_form.phps
+¦           ¦   ¦   smime_signed_mail.phps
+¦           ¦   ¦   smtp.phps
+¦           ¦   ¦   smtp_check.phps
+¦           ¦   ¦   smtp_low_memory.phps
+¦           ¦   ¦   smtp_no_auth.phps
+¦           ¦   ¦   ssl_options.phps
+¦           ¦   ¦   
+¦           ¦   +---images
+¦           ¦           PHPMailer card logo.afdesign
+¦           ¦           PHPMailer card logo.png
+¦           ¦           PHPMailer card logo.svg
+¦           ¦           phpmailer.png
+¦           ¦           phpmailer_mini.png
+¦           ¦           
+¦           +---language
+¦           ¦       phpmailer.lang-af.php
+¦           ¦       phpmailer.lang-ar.php
+¦           ¦       phpmailer.lang-as.php
+¦           ¦       phpmailer.lang-az.php
+¦           ¦       phpmailer.lang-ba.php
+¦           ¦       phpmailer.lang-be.php
+¦           ¦       phpmailer.lang-bg.php
+¦           ¦       phpmailer.lang-bn.php
+¦           ¦       phpmailer.lang-ca.php
+¦           ¦       phpmailer.lang-cs.php
+¦           ¦       phpmailer.lang-da.php
+¦           ¦       phpmailer.lang-de.php
+¦           ¦       phpmailer.lang-el.php
+¦           ¦       phpmailer.lang-eo.php
+¦           ¦       phpmailer.lang-es.php
+¦           ¦       phpmailer.lang-et.php
+¦           ¦       phpmailer.lang-fa.php
+¦           ¦       phpmailer.lang-fi.php
+¦           ¦       phpmailer.lang-fo.php
+¦           ¦       phpmailer.lang-fr.php
+¦           ¦       phpmailer.lang-gl.php
+¦           ¦       phpmailer.lang-he.php
+¦           ¦       phpmailer.lang-hi.php
+¦           ¦       phpmailer.lang-hr.php
+¦           ¦       phpmailer.lang-hu.php
+¦           ¦       phpmailer.lang-hy.php
+¦           ¦       phpmailer.lang-id.php
+¦           ¦       phpmailer.lang-it.php
+¦           ¦       phpmailer.lang-ja.php
+¦           ¦       phpmailer.lang-ka.php
+¦           ¦       phpmailer.lang-ko.php
+¦           ¦       phpmailer.lang-ku.php
+¦           ¦       phpmailer.lang-lt.php
+¦           ¦       phpmailer.lang-lv.php
+¦           ¦       phpmailer.lang-mg.php
+¦           ¦       phpmailer.lang-mn.php
+¦           ¦       phpmailer.lang-ms.php
+¦           ¦       phpmailer.lang-nb.php
+¦           ¦       phpmailer.lang-nl.php
+¦           ¦       phpmailer.lang-pl.php
+¦           ¦       phpmailer.lang-pt.php
+¦           ¦       phpmailer.lang-pt_br.php
+¦           ¦       phpmailer.lang-ro.php
+¦           ¦       phpmailer.lang-ru.php
+¦           ¦       phpmailer.lang-si.php
+¦           ¦       phpmailer.lang-sk.php
+¦           ¦       phpmailer.lang-sl.php
+¦           ¦       phpmailer.lang-sr.php
+¦           ¦       phpmailer.lang-sr_latn.php
+¦           ¦       phpmailer.lang-sv.php
+¦           ¦       phpmailer.lang-tl.php
+¦           ¦       phpmailer.lang-tr.php
+¦           ¦       phpmailer.lang-uk.php
+¦           ¦       phpmailer.lang-ur.php
+¦           ¦       phpmailer.lang-vi.php
+¦           ¦       phpmailer.lang-zh.php
+¦           ¦       phpmailer.lang-zh_cn.php
+¦           ¦       
+¦           +---src
+¦           ¦       DSNConfigurator.php
+¦           ¦       Exception.php
+¦           ¦       OAuth.php
+¦           ¦       OAuthTokenProvider.php
+¦           ¦       PHPMailer.php
+¦           ¦       POP3.php
+¦           ¦       SMTP.php
+¦           ¦       
+¦           +---test
+¦               ¦   DebugLogTestListener.php
+¦               ¦   fakepopserver.sh
+¦               ¦   fakesendmail.sh
+¦               ¦   PreSendTestCase.php
+¦               ¦   runfakepopserver.sh
+¦               ¦   SendTestCase.php
+¦               ¦   testbootstrap-dist.php
+¦               ¦   TestCase.php
+¦               ¦   validators.php
+¦               ¦   
+¦               +---Fixtures
+¦               ¦   +---FileIsAccessibleTest
+¦               ¦   ¦       accessible.txt
+¦               ¦   ¦       inaccessible.txt
+¦               ¦   ¦       
+¦               ¦   +---LocalizationTest
+¦               ¦           phpmailer.lang-fr.php
+¦               ¦           phpmailer.lang-nl.php
+¦               ¦           phpmailer.lang-xa_scri_cc.php
+¦               ¦           phpmailer.lang-xb_scri.php
+¦               ¦           phpmailer.lang-xc_cc.php
+¦               ¦           phpmailer.lang-xd_cc.php
+¦               ¦           phpmailer.lang-xd_scri.php
+¦               ¦           phpmailer.lang-xe.php
+¦               ¦           phpmailer.lang-xx.php
+¦               ¦           phpmailer.lang-yy.php
+¦               ¦           phpmailer.lang-zz.php
+¦               ¦           
+¦               +---Language
+¦               ¦       TranslationCompletenessTest.php
+¦               ¦       
+¦               +---OAuth
+¦               ¦       OAuthTest.php
+¦               ¦       
+¦               +---PHPMailer
+¦               ¦       AddEmbeddedImageTest.php
+¦               ¦       AddrFormatTest.php
+¦               ¦       AddStringAttachmentTest.php
+¦               ¦       AddStringEmbeddedImageTest.php
+¦               ¦       AuthCRAMMD5Test.php
+¦               ¦       CustomHeaderTest.php
+¦               ¦       DKIMTest.php
+¦               ¦       DKIMWithoutExceptionsTest.php
+¦               ¦       DSNConfiguratorTest.php
+¦               ¦       EncodeQTest.php
+¦               ¦       EncodeStringTest.php
+¦               ¦       FileIsAccessibleTest.php
+¦               ¦       FilenameToTypeTest.php
+¦               ¦       GenerateIdTest.php
+¦               ¦       GetLastMessageIDTest.php
+¦               ¦       HasLineLongerThanMaxTest.php
+¦               ¦       Html2TextTest.php
+¦               ¦       ICalTest.php
+¦               ¦       IsPermittedPathTest.php
+¦               ¦       IsValidHostTest.php
+¦               ¦       LocalizationTest.php
+¦               ¦       MailTransportTest.php
+¦               ¦       MbPathinfoTest.php
+¦               ¦       MimeTypesTest.php
+¦               ¦       NormalizeBreaksTest.php
+¦               ¦       ParseAddressesTest.php
+¦               ¦       PHPMailerTest.php
+¦               ¦       PunyencodeAddressTest.php
+¦               ¦       QuotedStringTest.php
+¦               ¦       ReplyToGetSetClearTest.php
+¦               ¦       SetErrorTest.php
+¦               ¦       SetFromTest.php
+¦               ¦       SetTest.php
+¦               ¦       SetWordWrapTest.php
+¦               ¦       Utf8CharBoundaryTest.php
+¦               ¦       ValidateAddressCustomValidatorTest.php
+¦               ¦       ValidateAddressTest.php
+¦               ¦       WrapTextTest.php
+¦               ¦       XMailerTest.php
+¦               ¦       
+¦               +---POP3
+¦               ¦       PopBeforeSmtpTest.php
+¦               ¦       
+¦               +---Security
+¦                       DenialOfServiceVectorsTest.php
+¦                       
++---views
+        footer.php
+        header.php
+        menu.php
+        vassoli.php
+        vemple.php
+        vhisser.php
+        vhome.php
+        vinfo.php
+        viniemp.php
+        vlogin.php
+        vmenui.php
+        vrecuperar.php
+        vrevehi.php
+        vsal.php
+        vseremp.php
+        vusuinf.php
+        vusuini.php
+        
