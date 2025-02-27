@@ -102,7 +102,7 @@ body {
   text-align: center;
   border-top: 1px solid #fafafa20;
   font-size: 16px;
-  background: #fafafa10; /* Aplica el efecto vidrio */
+  background: #ca9e9e10; /* Aplica el efecto vidrio */
 }
 
 /* Cuando el menú está expandido */
@@ -128,7 +128,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  border: 2px solid #00A8CC;
+  border: 2px solid #00E5FF;
   border-top: 0px ;
   border-radius: 0px 0px 20px 20px;
   align-items: center;
@@ -159,11 +159,11 @@ body {
   padding: 10px 15px;
   transition: background-color 0.3s;
   border-radius: 10px;
-  border: 2px solid #00A8CC;
+  border: 2px solid #00E5FF;
 }
 
 .nav-links a:hover {
-  background-color: #00A8CC;
+  background-color: #00E5FF;
   border-radius: 5px;
 }
 
@@ -229,7 +229,7 @@ body {
   font-size: 55px;
   line-height: 70px;
   font-weight: 800;
-  color: #00A8CC;
+  color: #00E5FF;
   margin-bottom: 25px;
 }
 
@@ -252,7 +252,7 @@ body {
 }
 
 .barran {
-  border: 2px solid #00A8CC;
+  border: 2px solid #00E5FF;
   border-radius: 10px;
   background: transparent;
   width: 400px;
@@ -319,7 +319,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #00A8CC;
+  border: 2px solid #00E5FF;
   border-bottom: 0px;
   border-radius: 20px 20px 0px 0px;
   color: #fff;
@@ -341,7 +341,7 @@ body {
 }
 
 .footer-social a:hover {
-  color: #00A8CC;
+  color: #00E5FF;
 }
 
 /* ____________________FOOTER____________________ */
@@ -551,7 +551,7 @@ z-index: 1; /* Detrás de la imagen */
 .btn {
   padding: 15px 20px; /* Aumenta el tamaño del botón */
   font-size: 18px; /* Aumenta el tamaño de la fuente del botón */
-  background-color: #00A8CC;
+  background-color: #00E5FF;
 }
 
 /* Estilo responsivo */
@@ -602,7 +602,7 @@ z-index: 1; /* Detrás de la imagen */
   margin: 0 auto;
 }
 .progress-step.completed::before {
-  background: #00A8CC;
+  background: #00E5FF;
 }
 .progress-step-label {
   margin-top: 10px;
@@ -620,7 +620,7 @@ z-index: 1; /* Detrás de la imagen */
 }
 .progress-bar-inner {
   height: 100%;
-  background: #00A8CC;
+  background: #00E5FF;
   width: 0%; /* Se actualizará con JS */
   transition: width 0.3s ease;
   z-index: 1;
@@ -660,7 +660,7 @@ z-index: 1; /* Detrás de la imagen */
 .servicio-titulo {
   font-size: 18px;
   font-weight: bold;
-  color: #00A8CC;
+  color: #00E5FF;
 }
 
 .servicio-detalle {
@@ -685,5 +685,7 @@ z-index: 1; /* Detrás de la imagen */
 
 
 /* _________________FIN CSS ACTORES_________________ */
+
+
 
 

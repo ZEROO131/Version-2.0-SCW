@@ -189,3 +189,18 @@ header{
         gap: 0;
     }
 }
+
+.forgot-password-container {
+    position: absolute;
+    right: -520px; /* Lo ocultamos inicialmente, igual que el registro */
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+
+#code-section, #verify-btn-section {
+    transition: all 0.3s ease-in-out;
+}
+
+

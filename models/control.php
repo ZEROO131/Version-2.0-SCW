@@ -6,6 +6,11 @@ if (isset($_GET['cerrar_sesion']) && $_GET['cerrar_sesion'] == 'true') {
     cerrarSesion();
 }
 
+// Procesar recuperación de contraseña
+if (isset($_POST['token']) && isset($_POST['nueva_contraseña'])) {
+    restablecerContrasena($_POST['token'], $_POST['nueva_contraseña']);
+}
+
 // Obtener datos del formulario
 $usu = isset($_POST['usu']) ? $_POST['usu'] : NULL;
 $pas = isset($_POST['pss']) ? $_POST['pss'] : NULL;
@@ -32,10 +37,8 @@ function valida($usu, $pas) {
         // Obtener la página inicial de acuerdo al perfil
         $paginaInicial = obtenerPaginaInicial($_SESSION['idper']);
         if ($paginaInicial) {
-            // Redirige a la página inicial según el perfil
             echo "<script>window.location='../home.php?pg=$paginaInicial';</script>";
         } else {
-            // En caso de no encontrar página inicial, redirige a una página de error o dashboard
             echo "<script>window.location='../home.php';</script>";
         }
         exit();
@@ -47,7 +50,6 @@ function valida($usu, $pas) {
 function red() {
     echo "<script>window.location='../index.php?pg=1002&err=oK';</script>";
 }
-
 
 function ingr($usu, $pas) {
     $res = NULL;
@@ -83,4 +85,25 @@ function obtenerPaginaInicial($idPerfil) {
     return $data ? $data['pagini'] : null;
 }
 
+function restablecerContrasena($token, $nueva_contraseña) {
+    $pdo = (new Conexion())->get_conexion();
+    $stmt = $pdo->prepare("SELECT emailusu FROM token WHERE token = ? AND expiracion > NOW()");
+    $stmt->execute([$token]);
+    $user = $stmt->fetch();
+
+    if ($user) {
+        $emailusu = $user['emailusu'];
+        $hashed_password = sha1(md5($nueva_contraseña . 'Jd#')); // Usar misma encriptación que en login
+
+        $stmt = $pdo->prepare("UPDATE usuario SET paswusu = ? WHERE emailusu = ?");
+        $stmt->execute([$hashed_password, $emailusu]);
+
+        $stmt = $pdo->prepare("DELETE FROM token WHERE token = ?");
+        $stmt->execute([$token]);
+
+        echo "<script>alert('Contraseña actualizada con éxito.'); window.location.href='../index.php?pg=1002';</script>";
+    } else {
+        echo "<script>alert('El token no es válido o ha expirado.'); window.location.href='../index.php?pg=1002';</script>";
+    }
+}
 ?>
